@@ -7,16 +7,18 @@
 <meta name="description" content="Anjita Neelatt Anilkumar is a Ph.D. researcher at IIT Bombay who uses Doppler weather radar and satellite remote sensing to detect and monitor desert locust swarms.">
 <style>
   :root {
-    --locust: #F5C02B;      /* frame and highlights: gregarious locust yellow */
-    --locust-soft: #FCE9A9;
-    --panel: #F7F8F3;
-    --card: #FFFFFF;
-    --ink: #18203A;         /* radar-screen navy, used for text */
-    --ink-soft: #55607A;
-    --line: #E4E6DC;
-    --echo: #17806A;        /* moderate-reflectivity green */
-    --echo-soft: #DDF1EA;
-    --scope: #101831;
+    --locust: #A9D0EA;      /* pastel blue: frame and buttons */
+    --locust-soft: #1B3142;
+    --mint: #1B3142;        /* second blue: dusty steel blue */
+    --mint-soft: #1B3142;
+    --underline: #CC6D3D;
+    --panel: #0C0D0F;
+    --card: #1A1D21;
+    --ink: #F4F6F9;         
+    --ink-soft: #A7B2BE;
+    --line: #2B3138;
+    --echo: #A9D0EA;
+    --echo-soft: #1B3142;
     --display: Aptos, "Aptos Display", "Segoe UI", Calibri, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
     --body: Aptos, "Segoe UI", Calibri, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   }
@@ -24,12 +26,12 @@
   html { scroll-behavior: smooth; scroll-padding-top: 24px; }
   body {
     margin: 0; padding: 14px;
-    background: var(--locust);
+    background: #A9D0EA;  /* border colour */
     color: var(--ink);
     font: 400 16px/1.6 var(--body);
     -webkit-font-smoothing: antialiased;
   }
-  a { color: inherit; text-decoration-color: var(--locust); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a { color: inherit; text-decoration-color: var(--underline); text-decoration-thickness: 2px; text-underline-offset: 3px; }
   a:hover { text-decoration-color: var(--ink); }
   :focus-visible { outline: 3px solid var(--echo); outline-offset: 2px; border-radius: 6px; }
   h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0; }
@@ -71,8 +73,8 @@
     display: block; padding: 7px 10px; border-radius: 8px;
     font-size: 14.5px; font-weight: 500; text-decoration: none;
   }
-  .nav a:hover { background: #ECEEE4; }
-  .nav a.on { background: var(--card); box-shadow: inset 3px 0 0 var(--locust), 0 1px 2px rgba(24,32,58,.08); }
+  .nav a:hover { background: #E6F0EF; }
+  .nav a.on { background: var(--card); box-shadow: inset 3px 0 0 var(--underline), 0 1px 2px rgba(24,32,58,.08); }
   .btn {
     display: inline-block; padding: 10px 16px; border-radius: 9px;
     background: var(--locust); color: var(--ink);
@@ -99,14 +101,14 @@
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   .hero-text { padding: 40px 38px; align-self: center; }
   .hero-text h1 { font-size: clamp(34px, 4.4vw, 50px); letter-spacing: -0.02em; }
-  .hero-text .lede { font-size: 18.5px; line-height: 1.55; margin-top: 16px; max-width: 34em; }
-  .hero-text .more { color: var(--ink-soft); margin-top: 12px; max-width: 36em; }
+  .hero-text .lede { font-size: 18.5px; line-height: 1.55; margin-top: 16px; }
+  .hero-text .more { color: var(--ink-soft); margin-top: 12px; }
   .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 
   /* Picture placeholders */
   .ph {
     position: relative; overflow: hidden; display: grid; place-items: center;
-    background: var(--locust-soft); color: #5C4500; border-radius: 10px;
+    background: var(--locust-soft); color: #1F4E6E; border-radius: 10px;
     aspect-ratio: 16 / 9; text-align: center; font-size: 12.5px; padding: 10px;
     background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,.45) 14px 28px);
   }
@@ -119,6 +121,7 @@
   .themes .card { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 4px 16px; align-items: start; }
   .themes .card > .ph { grid-row: span 2; margin: 0; }
   .themes .card > h3 { align-self: end; }
+  .themes .card:nth-child(even) > .ph { background-color: var(--mint); color: #7A3F1D; }
   .ph:not(.portrait) span { font-size: 10.5px; word-break: break-all; }
   .ph:not(.portrait) span b { font-size: 12.5px; }
   .card.split { display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 16px; align-items: start; }
@@ -131,23 +134,24 @@
   .grid > * { grid-column: span 3; }
   .grid > .full { grid-column: span 6; }
   .kicker { font-size: 13px; font-weight: 600; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-  .kicker i { width: 9px; height: 9px; border-radius: 50%; background: var(--locust); display: inline-block; }
+  .kicker i { width: 9px; height: 9px; border-radius: 50%; background: var(--underline); display: inline-block; }
   .grid h3 { font-size: 19px; }
   .grid p.small { font-size: 14.5px; color: var(--ink-soft); margin-top: 8px; }
-  .card.now { background: var(--locust-soft); border-color: transparent; }
+  .card.now { background: var(--mint-soft); border-color: transparent; }
   .card.now h3 { font-size: 22px; }
   .card.now p.small { color: var(--ink); }
-  .card.app { background: var(--echo); border-color: transparent; color: #fff; }
-  .card.app .kicker, .card.app p.small { color: #D4EFE7; }
-  .card.app .kicker i { background: #fff; }
-  .card.app a { text-decoration-color: #fff; font-weight: 600; }
+  .card.app { background: var(--mint); border-color: transparent; }
+  .card.app .kicker, .card.app p.small { color: var(--ink); }
+  .card.app .kicker i { background: #C96F3F; }
+  .card.app a { text-decoration-color: #C96F3F; font-weight: 600; }
+  .card.app .ph { background-color: var(--mint-soft); color: #7A3F1D; }
 
   /* Research */
   .themes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .themes h3 { font-size: 19px; }
   .themes p { font-size: 15px; color: var(--ink-soft); }
   
-  .note { font-size: 14px; color: var(--ink-soft); margin-top: 16px; max-width: 46em; }
+  .note { font-size: 14px; color: var(--ink-soft); margin-top: 30px; max-width: 46em; }
 
   /* Lists: publications, talks, timeline */
   .list { background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
@@ -158,8 +162,8 @@
   .list li > div { min-width: 0; }
   .list p { font-size: 14.5px; color: var(--ink-soft); margin-top: 4px; }
   .list p b { color: var(--ink); font-weight: 600; }
-  .tag { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 2px 9px; border-radius: 99px; background: var(--echo-soft); color: #0E5D4C; margin-right: 6px; }
-  .tag.wait { background: var(--locust-soft); color: #5C4500; }
+  .tag { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 2px 9px; border-radius: 99px; background: var(--echo-soft); color: #234A66; margin-right: 6px; }
+  .tag.wait { background: var(--mint-soft); color: #7A3F1D; }
   h2 + .sub, .list + .sub { font: 700 17px var(--display); margin: 26px 0 12px; }
   h2 + .sub { margin-top: 0; }
 
@@ -193,12 +197,13 @@
   .pill:hover { background: var(--locust-soft); }
 
   /* Contact */
-  .contact { background: var(--scope); color: #fff; border-radius: 16px; padding: 36px; }
+  .contact { background: var(--mint-soft); border-radius: 16px; padding: 36px; }
   .contact h2 { font-size: 30px; }
-  .contact p { color: #C3CBE3; margin-top: 10px; max-width: 38em; }
-  .contact .actions .btn.ghost { border-color: #fff; color: #fff; }
-  .contact .actions .btn.ghost:hover { background: #fff; color: var(--ink); }
+  .contact p { margin-top: 10px; max-width: 38em; }
+  .contact .btn { background: var(--ink); border-color: var(--ink); color: #fff; }
   .contact .btn:hover { background: #fff; border-color: #fff; color: var(--ink); }
+  .contact .btn.ghost { background: transparent; color: var(--ink); }
+  .contact .btn.ghost:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
   footer { margin-top: 28px; font-size: 13px; color: var(--ink-soft); }
 
   /* ---------- Tablet and phone ---------- */
@@ -242,6 +247,76 @@
     .grid > .full { grid-column: span 6; }
     .themes { grid-template-columns: 1fr 1fr; }
   }
+
+  /* ---------- Flat style: no rounded boxes, content sits on the page with rule lines ---------- */
+  .hero, .card, .list { border-radius: 0; }
+  .shell { border-radius: 18px; }
+  .ph, .card.split > .ph { border-radius: 12px; }
+  .ph.portrait { border-radius: 16px; }
+  .card.now, .card.app { border-radius: 16px; }
+  .contact { border-radius: 18px; }
+  .btn, .menu-btn { border-radius: 99px; }
+  .nav a { border-radius: 10px; }
+  .tag, .chips li { border-radius: 99px; }
+  .card { background: transparent; border: 0; border-top: 2px solid var(--ink); padding: 18px 0 0; }
+  .card.now, .card.app { border-top: 0; padding: 22px 24px; }
+  .grid, .themes { gap: 30px 28px; }
+  .hero { background: transparent; border: 0; overflow: visible; gap: 36px; }
+  .ph.portrait { margin: 0; }
+  .hero-text { padding: 0; }
+  .list { background: transparent; border: 0; border-top: 2px solid var(--ink); }
+  .list li { padding: 18px 0; }
+  .nav a.on { background: var(--locust-soft); box-shadow: inset 3px 0 0 #7DB5D1; }
+  .chips li { background: var(--locust-soft); border: 0; }
+  @media (max-width: 900px) {
+    .hero { gap: 20px; }
+    .ph.portrait { margin: 0; }
+    .hero-text { padding: 0; }
+    .list li { padding: 16px 0; }
+    .card.now, .card.app { padding: 18px; }
+  }
+
+  /* ---------- Black and blue theme ---------- */
+  :root { --on-blue: #0B1420; }
+  .btn, .avatar { color: var(--on-blue); }
+  .btn:hover { background: #fff; border-color: #fff; color: var(--on-blue); }
+  .btn.ghost { color: var(--ink); border-color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--on-blue); }
+  .nav a:hover { background: var(--card); }
+  .card, .list { border-top-color: #A9D0EA; }
+  .ph { color: #DCE5EF; background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,.06) 14px 28px); }
+  .ph.portrait { color: var(--on-blue); background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,.35) 14px 28px); }
+  .themes .card:nth-child(even) > .ph, .card.app .ph { background-color: #264457; color: #DCE5EF; }
+  .tag { color: #DCE5EF; }
+  .tag.wait { background: transparent; color: #DCE5EF; box-shadow: inset 0 0 0 1px #7DB5D1; }
+  .card.now { background: var(--locust); color: var(--on-blue); }
+  .card.now .kicker, .card.now p.small { color: var(--on-blue); }
+  .card.app .kicker, .card.app p.small { color: var(--ink); }
+  .card.app .kicker i { background: var(--locust); }
+  .card.app a { text-decoration-color: var(--locust); }
+  .social a:hover { color: var(--on-blue); }
+  .pill { box-shadow: none; }
+  .contact { background: var(--locust); color: var(--on-blue); }
+  .contact .btn { background: var(--on-blue); border-color: var(--on-blue); color: #fff; }
+  .contact .btn:hover { background: #fff; border-color: #fff; color: var(--on-blue); }
+  .contact .btn.ghost { background: transparent; color: var(--on-blue); border-color: var(--on-blue); }
+  .contact .btn.ghost:hover { background: var(--on-blue); color: #fff; }
+  .contact .social a { background: var(--on-blue); color: #fff; box-shadow: none; }
+  .contact .social a:hover { background: #fff; color: var(--on-blue); }
+
+  /* ---------- Third colour: soft butter yellow, used sparingly ---------- */
+  :root { --third: #CC6D3D; }
+  .card.now { background: #B5582A; color: #fff; }
+  .card.now .kicker, .card.now p.small { color: #fff; }
+  .card.now .kicker i { background: #fff !important; }
+  .tag.wait { color: #F2B596; box-shadow: inset 0 0 0 1px var(--third); }
+  .nav a.on { box-shadow: inset 3px 0 0 var(--third); }
+  .card.app .kicker i { background: var(--third); }
+  .card.app a { text-decoration-color: var(--third); }
+  .btn:hover { background: var(--third); border-color: var(--third); color: #fff; }
+  .contact .btn:hover, .contact .social a:hover { background: #B74803; border-color: #B74803; color: #fff; }
+  .social a:hover { background: var(--third); color: #fff; }
+  @media (max-width: 900px) { .shell { border-radius: 14px; } .side { border-radius: 14px 14px 0 0; } }
 </style>
 </head>
 <body>
@@ -302,7 +377,7 @@
       <h2>Updates</h2>
       <div class="grid">
         <article class="card full now">
-          <p class="kicker"><i style="background:var(--ink)"></i>Right now</p>
+          <p class="kicker"><i style="background:var(--on-blue)"></i>Right now</p>
           <h3>Finishing my thesis and looking for a postdoctoral position from early 2027.</h3>
           <p class="small">Thesis submission is planned for January 2027. I am keen to apply radar aeroecology to insects, birds and other things that fly.</p>
         </article>
