@@ -1,724 +1,786 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anjita N. A. | Radar remote sensing</title>
-<meta name="description" content="Anjita Neelatt Anilkumar, PhD researcher at IIT Bombay using Doppler weather radar and satellite remote sensing for desert locust early warning.">
-<meta property="og:title" content="Anjita Neelatt Anilkumar | Radar remote sensing">
-<meta property="og:description" content="Doppler weather radar and satellite approaches to India's desert locust challenge.">
-<meta name="theme-color" content="#CFE3F6">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23CFE3F6' stroke='%230F2540' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%230F2540' stroke-width='1.5'/%3E%3Cpath d='M16 16L27 9' stroke='%230F2540' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='22' cy='8' r='3' fill='%23F2B705'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Anjita Neelatt Anilkumar","alternateName":"N. A. Anjita","jobTitle":"PhD researcher, Remote Sensing","affiliation":{"@type":"CollegeOrUniversity","name":"Indian Institute of Technology Bombay"},"email":"mailto:anjitaneelatt@gmail.com","sameAs":["https://www.linkedin.com/in/anjita-neelatt/","https://scholar.google.com/citations?user=R3qMy7QAAAAJ","https://orcid.org/0000-0001-9831-5446","https://github.com/AnjitaNeelatt"]}
-</script>
+<title>Anjita Neelatt Anilkumar | Radar entomology | Remote sensing </title>
+<meta name="description" content="Anjita Neelatt Anilkumar is a Ph.D. researcher at IIT Bombay who uses Doppler weather radar and satellite remote sensing to detect and monitor desert locust swarms.">
 <style>
-/*
-VOICE   calm, precise, quietly delighted by the science
-IDEA    a weather radar display: range rings, a sweeping beam, echoes sorted by dual-pol
-PICTURE live radar scope in the hero where a locust swarm separates from rain and dust
-COLOUR  pastel sky blue field, deep ink, locust yellow as the one sharp accent
-TYPE    Archivo throughout: expanded for the name, condensed for radar readouts
-LAYOUT  name and links left, scope right, then bands that alternate sky and paper
-*/
-:root{
-  color-scheme:light;
-  --sky:#CFE3F6; --sky-soft:#E4EFFA; --paper:#F6FAFE; --white:#fff;
-  --ink:#0F2540; --ink-2:#3B5470; --line:#A9C7E4; --line-soft:#D6E5F4;
-  --blue:#1E5799; --swarm:#F2B705; --rain:#2D64AE; --dust:#B39469;
-  --font:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-}
-*{box-sizing:border-box;min-width:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 16.5px/1.6 var(--font);overflow-x:clip;-webkit-font-smoothing:antialiased}
-a{color:var(--blue);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{color:var(--ink)}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
-img,svg{display:block;max-width:100%}
-h1,h2,h3{margin:0;line-height:1.08;text-wrap:balance}
-h2{font-size:clamp(30px,3.4vw,44px);font-stretch:112%;font-weight:760;letter-spacing:-.01em}
-h3{font-size:19px;font-weight:700;font-stretch:104%}
-p{margin:0}
-ul,ol{margin:0;padding:0;list-style:none}
-.wrap{max-width:1200px;margin-inline:auto;padding-inline:max(5vw,18px)}
-.muted{color:var(--ink-2)}
-.cond{font-stretch:78%;font-weight:600;letter-spacing:.01em}
+  :root {
+    --locust: #A9D0EA;      /* pastel blue: frame and buttons */
+    --locust-soft: #1B3142;
+    --mint: #1B3142;        /* second blue: dusty steel blue */
+    --mint-soft: #1B3142;
+    --underline: #CC6D3D;
+    --panel: #0C0D0F;
+    --card: #1A1D21;
+    --ink: #F4F6F9;         
+    --ink-soft: #A7B2BE;
+    --line: #2B3138;
+    --echo: #A9D0EA;
+    --echo-soft: #1B3142;
+    --display: Aptos, "Aptos Display", "Segoe UI", Calibri, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --body: Aptos, "Segoe UI", Calibri, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body {
+    margin: 0; padding: 14px;
+    background: #A9D0EA;  /* border colour */
+    color: var(--ink);
+    font: 400 16px/1.6 var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-color: var(--underline); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--ink); }
+  :focus-visible { outline: 3px solid var(--echo); outline-offset: 2px; border-radius: 6px; }
+  h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0; }
+  p { margin: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.65);color:var(--ink);font:600 15px/1 var(--font);text-decoration:none;cursor:pointer;white-space:nowrap}
-.btn:hover{background:var(--white);color:var(--ink);border-color:var(--ink-2)}
-.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--white)}
-.btn.primary:hover{background:var(--blue);border-color:var(--blue)}
-.btn svg{width:18px;height:18px}
-.btn.sm{min-height:38px;padding:0 14px;font-size:14px}
-.chip{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--ink);font:500 13.5px/1 var(--font);text-decoration:none;cursor:pointer}
-.chip:hover{border-color:var(--ink-2);color:var(--ink)}
-.chip.todo{border-style:dashed;color:var(--ink-2);background:transparent}
+  .shell {
+    background: var(--panel);
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: 248px minmax(0, 1fr);
+    min-height: calc(100vh - 28px);
+    max-width: 1400px; margin: 0 auto;
+  }
 
-/* nav */
-.nav{position:relative;z-index:20;background:rgba(207,227,246,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-@media(min-width:900px){.nav{position:sticky;top:0}}
-.nav .wrap{display:flex;align-items:center;gap:16px;min-height:66px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-stretch:115%;font-size:18px;color:var(--ink);text-decoration:none;flex:none}
-.brand svg{width:30px;height:30px}
-.links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-inline:auto}
-.links::-webkit-scrollbar{display:none}
-.links a{flex:none;padding:11px 13px;border-radius:999px;color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
-.links a:hover,.links a.on{background:rgba(255,255,255,.75)}
-@media(max-width:899px){.nav .wrap{flex-wrap:wrap;gap:6px 12px;padding-block:10px}.links{order:3;width:100%;margin-inline:-8px}.nav .btn{margin-left:auto}}
+  /* ---------- Sidebar ---------- */
+  .side {
+    position: sticky; top: 14px; align-self: start;
+    height: calc(100vh - 28px);
+    padding: 26px 20px 22px;
+    display: flex; flex-direction: column;
+    border-right: 1px solid var(--line);
+    overflow-y: auto;
+  }
+  .who { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%; flex: none;
+    background: var(--locust); color: var(--ink);
+    display: grid; place-items: center;
+    font: 700 20px var(--display);
+    object-fit: cover;
+  }
+  .who .name strong { display: block; font: 700 16px/1.2 var(--display); }
+  .who .name span { display: block; font-size: 13px; color: var(--ink-soft); }
+  .menu-btn { display: none; }
+  .nav { margin-top: 14px; flex: 1; }
+  .nav p { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); margin: 18px 0 6px 10px; }
+  .nav a {
+    display: block; padding: 7px 10px; border-radius: 8px;
+    font-size: 14.5px; font-weight: 500; text-decoration: none;
+  }
+  .nav a:hover { background: #E6F0EF; }
+  .nav a.on { background: var(--card); box-shadow: inset 3px 0 0 var(--underline), 0 1px 2px rgba(24,32,58,.08); }
+  .btn {
+    display: inline-block; padding: 10px 16px; border-radius: 9px;
+    background: var(--locust); color: var(--ink);
+    font-weight: 600; font-size: 14.5px; text-decoration: none; text-align: center;
+    border: 2px solid var(--locust);
+  }
+  .btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .btn.ghost { background: transparent; border-color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: #fff; }
+  .side .btn { margin-top: 18px; }
 
-/* hero */
-.hero{position:relative;overflow:hidden;background:var(--sky);padding-block:clamp(36px,5vw,72px) clamp(40px,5vw,80px)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:center;position:relative}
-.intro{position:relative;z-index:2}
-.who{display:flex;align-items:center;gap:14px;margin-bottom:22px;color:var(--ink-2);font-size:15px;line-height:1.4}
-.avatar{position:relative;flex:none;width:76px;height:76px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px var(--white),0 0 0 5px var(--line)}
-.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
-.avatar .mono{position:absolute;inset:0;display:grid;place-items:center;color:var(--white);font-weight:800;font-stretch:120%;font-size:24px}
-.avatar.noimg img{display:none}
-.name{font-size:clamp(44px,6.2vw,86px);font-weight:820;font-stretch:118%;letter-spacing:-.02em;line-height:.98}
-.lead{margin-top:22px;font-size:clamp(17px,1.5vw,20px);line-height:1.55;max-width:34em}
-.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.alt-links{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:16px;font-size:15px}
-.alt-links a,.alt-links button{display:inline-flex;align-items:center;min-height:32px;padding:0;border:0;background:none;color:var(--ink);font:600 15px/1 var(--font);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:5px;text-decoration-thickness:2px;cursor:pointer}
-.alt-links a:hover,.alt-links button:hover{text-decoration-color:var(--ink)}
-.alt-links .lbl{color:var(--ink-2);font-weight:500}
-.now{display:flex;gap:12px;align-items:flex-start;margin-top:22px;padding:12px 16px;border-radius:16px;background:rgba(255,255,255,.6);max-width:34em;font-size:15px;line-height:1.5}
-.now .dot{flex:none;width:12px;height:12px;margin-top:5px;border-radius:50%;background:var(--swarm);box-shadow:0 0 0 4px rgba(242,183,5,.25)}
+  /* ---------- Main ---------- */
+  main { padding: 26px 30px 40px; }
+  section { margin-top: 104px; }
+  section > h2 { font-size: 26px; margin-bottom: 28px; }
+  .card { background: var(--card); border-radius: 14px; padding: 22px; border: 1px solid var(--line); }
 
-.scope-fig{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px}
-.scope-fig>:not(svg){position:relative;z-index:2}
-.seg{display:inline-flex;padding:4px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid var(--line)}
-.seg button{min-height:40px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:var(--ink);font:600 14.5px/1 var(--font);cursor:pointer}
-.seg button[aria-pressed=true]{background:var(--ink);color:var(--white)}
-#scope{width:100%;max-width:540px;aspect-ratio:1;overflow:visible}
-#scope text{font-family:var(--font);font-stretch:78%;font-weight:600}
-.readout{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:14px;color:var(--ink-2)}
-.readout #ro-hit{color:var(--ink)}
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;font-size:13.5px;color:var(--ink-2)}
-.legend span{display:inline-flex;align-items:center;gap:6px}
-.legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
-.legend .bar{display:flex;gap:0}
-.legend .bar i{width:30px;height:10px;border-radius:0}
-.legend .bar i:first-child{border-radius:5px 0 0 5px}.legend .bar i:last-child{border-radius:0 5px 5px 0}
-@media(max-width:600px){#scope .lbl text{font-size:23px}#scope .tk{font-size:19px}#scope .rk{font-size:16px}}
-.scope-fig figcaption{max-width:36em;text-align:center;font-size:14.5px;line-height:1.5;color:var(--ink-2)}
-.note{display:block;margin-top:4px;font-size:13px;opacity:.85}
+  /* Hero */
+  .hero {
+    margin-top: 0;
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    display: grid; grid-template-columns: 280px minmax(0, 1fr); overflow: hidden;
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  .hero-text { padding: 40px 38px; align-self: center; }
+  .hero-text h1 { font-size: clamp(34px, 4.4vw, 50px); letter-spacing: -0.02em; }
+  .hero-text .lede { font-size: 18.5px; line-height: 1.55; margin-top: 16px; }
+  .hero-text .more { color: var(--underline); margin-top: 12px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 
-/* bands */
-.band{position:relative;padding-block:clamp(56px,7vw,104px)}
-.band.sky{background:var(--sky-soft)}
-.band.rings::before{content:"";position:absolute;top:0;right:0;width:min(520px,70vw);height:min(520px,70vw);background:repeating-radial-gradient(circle at 100% 0,transparent 0 51px,rgba(30,87,153,.09) 51px 52px);-webkit-mask:radial-gradient(circle at 100% 0,#000 30%,transparent 70%);mask:radial-gradient(circle at 100% 0,#000 30%,transparent 70%);pointer-events:none}
-.head{display:grid;gap:14px;margin-bottom:clamp(28px,4vw,48px);max-width:46em;position:relative}
-.sec-intro{font-size:18px;color:var(--ink-2)}
+  /* Picture placeholders */
+  .ph {
+    position: relative; overflow: hidden; display: grid; place-items: center;
+    background: var(--locust-soft); color: #1F4E6E; border-radius: 10px;
+    aspect-ratio: 16 / 9; text-align: center; font-size: 12.5px; padding: 10px;
+    background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,.45) 14px 28px);
+  }
+  .ph span b { display: block; font-size: 14px; }
+  .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .ph.has { padding: 0; }
+  .ph.portrait { border-radius: 14px; aspect-ratio: 4 / 5; margin: 26px 0 26px 26px; align-self: center; background-color: var(--locust); color: var(--ink); font-size: 14px; }
+  .ph.portrait span b { font-size: 18px; }
+  .card > .ph { width: 96px; aspect-ratio: 1; margin: 0 0 14px; }
+  .themes .card { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 4px 16px; align-items: start; }
+  .themes .card > .ph { grid-row: span 2; margin: 0; }
+  .themes .card > h3 { align-self: end; }
+  .themes .card:nth-child(even) > .ph { background-color: var(--mint); color: #7A3F1D; }
+  .ph:not(.portrait) span { font-size: 10.5px; word-break: break-all; }
+  .ph:not(.portrait) span b { font-size: 12.5px; }
+  .card.split { display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 16px; align-items: start; }
+  .card.split > .ph { aspect-ratio: 1; margin: 0; border-radius: 10px; }
+  .avatar { position: relative; overflow: hidden; }
+  .avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
-/* news */
-.news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
-.news li{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--line-soft)}
-.news time{font-stretch:78%;font-weight:650;color:var(--blue);white-space:nowrap}
-.tag{display:inline-block;margin-right:8px;padding:1px 9px;border-radius:999px;background:var(--sky-soft);font-size:13px;font-weight:600;color:var(--ink-2);vertical-align:1px}
-.tag.paper{background:#DCE8F7}.tag.talk{background:#E2F1EA}.tag.tool{background:#FCEFC2}.tag.milestone{background:#ECE6F5}
+  /* Updates grid */
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .grid > * { grid-column: span 3; }
+  .grid > .full { grid-column: span 6; }
+  .kicker { font-size: 13px; font-weight: 600; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .kicker i { width: 9px; height: 9px; border-radius: 50%; background: var(--underline); display: inline-block; }
+  .grid h3 { font-size: 19px; }
+  .grid p.small { font-size: 14.5px; color: var(--ink-soft); margin-top: 8px; }
+  .card.now { background: var(--mint-soft); border-color: transparent; }
+  .card.now h3 { font-size: 22px; }
+  .card.now p.small { color: var(--ink); }
+  .card.app { background: var(--mint); border-color: transparent; }
+  .card.app .kicker, .card.app p.small { color: var(--ink); }
+  .card.app .kicker i { background: #C96F3F; }
+  .card.app a { text-decoration-color: #C96F3F; font-weight: 600; }
+  .card.app .ph { background-color: var(--mint-soft); color: #7A3F1D; }
 
-/* research */
-.stages{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
-.stages::before{content:"";position:absolute;left:44px;right:44px;top:44px;border-top:2px dashed var(--line)}
-.stages li{position:relative;display:grid;gap:10px;align-content:start}
-.pict{width:88px;height:88px;border-radius:50%;background:var(--sky);display:grid;place-items:center;box-shadow:0 0 0 6px var(--paper);color:var(--ink)}
-.pict svg{width:54px;height:54px}
-.stages h3{margin-top:8px;font-size:24px;font-stretch:112%;font-weight:760}
-.stages p{color:var(--ink-2)}
-.stages .src{font-size:14.5px}
-.delve{margin-top:clamp(36px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(22px,3vw,36px);border-radius:28px;background:var(--white);border:1px solid var(--line-soft)}
-.delve h3{font-size:clamp(24px,2.4vw,32px);font-stretch:112%;font-weight:760}
-.delve p{margin-top:10px;color:var(--ink-2)}
-.delve .btns{margin-top:18px}
-#ndvi{width:100%;height:auto;border-radius:14px}
-.ndvi-key{display:flex;justify-content:space-between;gap:8px;margin-top:8px;font-size:13px;color:var(--ink-2)}
-.fineprint{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 48px;font-size:15px;color:var(--ink-2)}
+  /* Research */
+  .themes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .themes h3 { font-size: 19px; }
+  .themes p { font-size: 15px; color: var(--ink-soft); }
+  
+    .note { font-size: 14px; color: var(--ink-soft); margin-top: 30px; max-width: 46em; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 
-/* publications */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.filters button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--white)}
-.pubs .grp{display:block;padding:26px 0 6px;font-size:15px;font-weight:700;color:var(--ink-2);border:0}
-.pubs .grp:first-child{padding-top:0}
-.pubs li{display:grid;grid-template-columns:5.5em minmax(0,1fr);gap:18px;padding:22px 0;border-top:1px solid var(--line-soft)}
-.pubs li[hidden]{display:none}
-.pubs .yr{font-size:22px;font-stretch:90%;font-weight:700;color:var(--ink-2)}
-.pubs .t{font-size:18px;font-weight:650;line-height:1.35;color:var(--ink)}
-.pubs .t a{color:inherit;text-decoration:none}
-.pubs .t a:hover{text-decoration:underline}
-.pubs .au{margin-top:6px;font-size:15px;color:var(--ink-2)}
-.pubs .au b{color:var(--ink);font-weight:700}
-.pubs .ve{font-size:15px;font-style:italic;color:var(--ink-2)}
-.pubs .act{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
-.status{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:var(--ink);padding:0 10px;min-height:28px;border-radius:999px;background:var(--sky-soft)}
-.status i{width:9px;height:9px;border-radius:50%}
+  /* Lists: publications, talks, timeline */
+  .list { background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+  .list li { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 14px; padding: 18px 22px; border-top: 1px solid var(--line); }
+  .list li:first-child { border-top: 0; }
+  .list .yr { font: 700 15px/1.6 var(--display); color: var(--ink-soft); }
+  .list h3 { font: 600 16px/1.4 var(--body); }
+  .list li > div { min-width: 0; }
+  .list.pubs li { grid-template-columns: minmax(0, 1fr); }   /* publications are grouped under year headings */
+  .list p { font-size: 14.5px; color: var(--ink-soft); margin-top: 4px; }
+  .list p b { color: var(--ink); font-weight: 600; }
+  .tag { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 2px 9px; border-radius: 99px; background: var(--echo-soft); color: #234A66; margin-right: 6px; }
+  .tag.wait { background: var(--mint-soft); color: #7A3F1D; }
+  h2 + .sub, .list + .sub { font: 700 17px var(--display); margin: 44px 0 14px; }
+  h2 + .sub { margin-top: 0; }
 
-/* talks + teaching + background */
-.cols{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)}
-.list li{display:grid;grid-template-columns:6.5em minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid var(--line-soft)}
-.list time{font-stretch:78%;font-weight:650;color:var(--blue);white-space:nowrap}
-/* range-line timeline: each entry is an echo on the beam */
-.tl li{gap:0;padding:0;border:0}
-.tl li>time{padding:2px 18px 0 0}
-.tl li>div{position:relative;padding:0 0 30px 26px;border-left:2px solid var(--line)}
-.tl li:last-child>div{border-left-color:transparent;padding-bottom:0}
-.tl li:last-child>div::after{content:"";position:absolute;left:-2px;top:0;height:14px;border-left:2px solid var(--line)}
-.tl li>div::before{content:"";position:absolute;left:-8px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--white);border:2px solid var(--blue);box-sizing:border-box}
-.tl li.hot>div::before{background:var(--swarm);border-color:#B98A00;box-shadow:0 0 0 4px rgba(242,183,5,.25)}
-.tl li.ring>div::before{background:var(--blue)}
-.list .k{font-size:13.5px;font-weight:600;color:var(--ink-2)}
-.list .tt{font-weight:650;line-height:1.4}
-.list .vv{font-size:15px;color:var(--ink-2)}
-.list .lk{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.award{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:13.5px;font-weight:600;padding:3px 10px;border-radius:999px;background:#FCEFC2;color:#5E4500}
-.key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--ink-2)}
-.key span{display:inline-flex;align-items:center;gap:7px}
-.key i{width:13px;height:13px;border-radius:50%;border:2px solid var(--blue);background:var(--white)}
-.key .k-oral{background:var(--blue)}.key .k-award{background:var(--swarm);border-color:#B98A00}
-.col-title{font-size:15px;font-weight:700;color:var(--ink-2);margin-bottom:6px}
-.teach{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.teach li{padding:22px;border-radius:22px;background:var(--white);border:1px solid var(--line-soft);display:grid;gap:8px;align-content:start}
-.teach .when{font-stretch:78%;font-weight:650;color:var(--blue)}
-.teach p{font-size:15.5px;color:var(--ink-2)}
-.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-.skills span{padding:6px 12px;border-radius:999px;background:var(--white);border:1px solid var(--line-soft);font-size:14.5px}
-.block+.block{margin-top:34px}
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .chips li { padding: 5px 12px; border-radius: 99px; background: var(--panel); border: 1px solid var(--line); font-size: 14px; font-weight: 500; }
+  .card h3.h { font-size: 17px; }
+  .card h3.h + .chips + h3.h { margin-top: 20px; }
 
-/* contact */
-.contact{position:relative;overflow:hidden;background:var(--sky);padding-block:clamp(64px,8vw,120px)}
-.contact::before{content:"";position:absolute;left:50%;top:100%;width:1400px;height:1400px;transform:translate(-50%,-50%);border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 69px,rgba(255,255,255,.7) 69px 71px);pointer-events:none}
-.contact .wrap{position:relative;display:grid;justify-items:center;text-align:center;gap:18px}
-.contact h2{font-size:clamp(34px,4.4vw,56px)}
-.mail{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;font-size:clamp(20px,2.4vw,28px);font-weight:650;font-stretch:105%}
-.mail a{color:var(--ink)}
-footer{background:var(--ink);color:#C9DAEC;font-size:14px;padding-block:26px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
-footer a{color:#fff}
+  /* Round social buttons */
+  .social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .social a {
+    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--card); color: var(--ink); text-decoration: none;
+    box-shadow: 0 1px 4px rgba(24,32,58,.22); font: 700 15px/1 var(--display);
+  }
+  .social a:hover { background: var(--locust); }
+  .social svg { width: 19px; height: 19px; }
+  .contact .social { margin-top: 22px; }
+  .side .social { gap: 8px; }
+  .side .social a { width: 34px; height: 34px; font-size: 13.5px; }
+  .side .social svg { width: 17px; height: 17px; }
 
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:999px;font-size:14.5px;transition:.25s;pointer-events:none;z-index:50}
-.toast.show{opacity:1;transform:translate(-50%,0)}
+  /* Pill link under a publication */
+  .pill {
+    display: inline-block; max-width: 100%; margin-top: 10px; padding: 7px 16px; border-radius: 99px;
+    background: var(--card); border: 1px solid var(--line); box-shadow: 0 2px 5px rgba(24,32,58,.16);
+    font-size: 14px; color: var(--ink); text-decoration: none;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; vertical-align: top;
+  }
+  .pill:hover { background: var(--locust-soft); }
 
-@media(max-width:980px){
-  .hero-grid{grid-template-columns:minmax(0,1fr)}
-  .scope-fig{order:2}
-  .stages{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}
-  .stages::before{display:none}
-  .delve,.cols{grid-template-columns:minmax(0,1fr)}
-  .teach{grid-template-columns:minmax(0,1fr)}
-}
-@media(max-width:899px){.links{-webkit-mask-image:linear-gradient(90deg,#000 80%,transparent);mask-image:linear-gradient(90deg,#000 80%,transparent);padding-right:40px}}
-@media(max-width:640px){
-  .news,.fineprint{grid-template-columns:minmax(0,1fr)}
-  .stages{grid-template-columns:minmax(0,1fr)}
-  .news li,.list li{grid-template-columns:minmax(0,1fr);gap:4px}
-  .tl li{position:relative;padding:0 0 26px 26px;border-left:2px solid var(--line);gap:2px}
-  .tl li:last-child{border-left-color:transparent;padding-bottom:0}
-  .tl li>time{padding:0}
-  .tl li>div,.tl li:last-child>div{border:0;padding:0;position:static}
-  .tl li:last-child>div::after{display:none}
-  .tl li>div::before{top:4px}
-  .pubs li{grid-template-columns:minmax(0,1fr);gap:6px}
-  .pubs .yr{font-size:16px}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toast{transition:none}}
-@media print{
-  .nav,.scope-fig,.btns,.alt-links,.filters,.act,.lk,.delve>div:last-child,.toast,.mail button{display:none!important}
-  .hero,.band,.contact{background:#fff!important;padding-block:18px}
-  .hero-grid,.cols,.delve{display:block}
-  .band.rings::before,.contact::before{display:none}
-  .name{font-size:36px}
-  a{color:#000}
-}
+  /* Contact */
+  .contact { background: var(--mint-soft); border-radius: 16px; padding: 36px; }
+  .contact h2 { font-size: 30px; }
+  .contact p { margin-top: 10px; max-width: none; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+  .contact .btn { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .contact .btn:hover { background: #fff; border-color: #fff; color: var(--ink); }
+  .contact .btn.ghost { background: transparent; color: var(--ink); }
+  .contact .btn.ghost:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+  footer { margin-top: 28px; font-size: 13px; color: var(--ink-soft); }
+
+  /* ---------- Tablet and phone ---------- */
+  @media (max-width: 900px) {
+    body { padding: 8px; }
+    .shell { display: block; min-height: 0; border-radius: 14px; }
+    .side {
+      position: sticky; top: 8px; z-index: 10; height: auto;
+      padding: 12px 14px; border-right: 0; border-bottom: 1px solid var(--line);
+      background: var(--panel); border-radius: 14px 14px 0 0;
+      display: grid; grid-template-columns: 1fr auto; align-items: center;
+    }
+    .menu-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font: 600 14.5px var(--body); color: var(--ink);
+      background: var(--card); border: 1px solid var(--line); border-radius: 9px; padding: 9px 13px; cursor: pointer;
+    }
+    .menu-btn svg { width: 16px; height: 16px; }
+    .nav, .side .btn, .side .social { display: none; grid-column: 1 / -1; }
+    .side.open .social { display: flex; margin-top: 12px; }
+    .side.open .nav { display: block; margin-top: 8px; }
+    .side.open .btn { display: block; margin: 12px 0 6px; }
+    .nav a { padding: 10px; font-size: 16px; }
+    html { scroll-padding-top: 84px; }
+    main { padding: 16px 14px 28px; }
+    section { margin-top: 76px; }
+    .hero { grid-template-columns: 1fr; }
+    .ph.portrait { width: 170px; margin: 24px 22px 0; }
+    .hero-text { padding: 26px 22px 28px; }
+    .card.split { grid-template-columns: minmax(0, 1fr) 84px; }
+    .hero-text .lede { font-size: 17.5px; }
+    .grid > *, .grid > .full { grid-column: span 6; }
+    .themes, .two { grid-template-columns: 1fr; }
+    .pill { max-width: 100%; }
+    .list li { grid-template-columns: 1fr; gap: 2px; padding: 16px 18px; }
+    .contact { padding: 26px 22px; }
+    .actions .btn { flex: 1 1 auto; }
+  }
+  @media (min-width: 620px) and (max-width: 900px) {
+    .grid > * { grid-column: span 3; }
+    .grid > .full { grid-column: span 6; }
+    .themes { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ---------- Flat style: no rounded boxes, content sits on the page with rule lines ---------- */
+  .hero, .card, .list { border-radius: 0; }
+  .shell { border-radius: 18px; }
+  .ph, .card.split > .ph { border-radius: 12px; }
+  .ph.portrait { border-radius: 16px; }
+  .card.now, .card.app { border-radius: 16px; }
+  .contact { border-radius: 18px; }
+  .btn, .menu-btn { border-radius: 99px; }
+  .nav a { border-radius: 10px; }
+  .tag, .chips li { border-radius: 99px; }
+  .card { background: transparent; border: 0; border-top: 2px solid var(--ink); padding: 18px 0 0; }
+  .card.now, .card.app { border-top: 0; padding: 22px 24px; }
+  .grid, .themes { gap: 30px 28px; }
+  .hero { background: transparent; border: 0; overflow: visible; gap: 36px; }
+  .ph.portrait { margin: 0; }
+  .hero-text { padding: 0; }
+  .list { background: transparent; border: 0; border-top: 2px solid var(--ink); }
+  .list li { padding: 18px 0; }
+  .nav a.on { background: var(--locust-soft); box-shadow: inset 3px 0 0 #7DB5D1; }
+  .chips li { background: var(--locust-soft); border: 0; }
+  @media (max-width: 900px) {
+    .hero { gap: 20px; }
+    .ph.portrait { margin: 0; }
+    .hero-text { padding: 0; }
+    .list li { padding: 16px 0; }
+    .card.now, .card.app { padding: 18px; }
+  }
+
+  /* ---------- Black and blue theme ---------- */
+  :root { --on-blue: #0B1420; }
+  .btn, .avatar { color: var(--on-blue); }
+  .btn:hover { background: #fff; border-color: #fff; color: var(--on-blue); }
+  .btn.ghost { color: var(--ink); border-color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--on-blue); }
+  .nav a:hover { background: var(--card); }
+  .card, .list { border-top-color: #A9D0EA; }
+  .ph { color: #DCE5EF; background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,.06) 14px 28px); }
+  .ph.portrait { color: var(--on-blue); background-image: repeating-linear-gradient(135deg, transparent 0 14px, rgba(255,255,255,.35) 14px 28px); }
+  .themes .card:nth-child(even) > .ph, .card.app .ph { background-color: #264457; color: #DCE5EF; }
+  .tag { color: #DCE5EF; }
+  .tag.wait { background: transparent; color: #DCE5EF; box-shadow: inset 0 0 0 1px #7DB5D1; }
+  .card.now { background: var(--locust); color: var(--on-blue); }
+  .card.now .kicker, .card.now p.small { color: var(--on-blue); }
+  .card.app .kicker, .card.app p.small { color: var(--ink); }
+  .card.app .kicker i { background: var(--locust); }
+  .card.app a { text-decoration-color: var(--locust); }
+  .social a:hover { color: var(--on-blue); }
+  .pill { box-shadow: none; }
+  .contact { background: var(--locust); color: var(--on-blue); }
+  .contact .btn { background: var(--on-blue); border-color: var(--on-blue); color: #fff; }
+  .contact .btn:hover { background: #fff; border-color: #fff; color: var(--on-blue); }
+  .contact .btn.ghost { background: transparent; color: var(--on-blue); border-color: var(--on-blue); }
+  .contact .btn.ghost:hover { background: var(--on-blue); color: #fff; }
+  .contact .social a { background: var(--on-blue); color: #fff; box-shadow: none; }
+  .contact .social a:hover { background: #fff; color: var(--on-blue); }
+
+  /* ---------- Third colour: soft butter yellow, used sparingly ---------- */
+  :root { --third: #CC6D3D; }
+  .card.now { background: #B5582A; color: #fff; }
+  .card.now .kicker, .card.now p.small { color: #fff; }
+  .card.now .kicker i { background: #fff !important; }
+  .tag.wait { color: #F2B596; box-shadow: inset 0 0 0 1px var(--third); }
+  .nav a.on { box-shadow: inset 3px 0 0 var(--third); }
+  .card.app .kicker i { background: var(--third); }
+  .card.app a { text-decoration-color: var(--third); }
+  .btn:hover { background: var(--third); border-color: var(--third); color: #fff; }
+  .contact .btn:hover, .contact .social a:hover { background: #B74803; border-color: #B74803; color: #fff; }
+  .social a:hover { background: var(--third); color: #fff; }
+  @media (max-width: 900px) { .shell { border-radius: 14px; } .side { border-radius: 14px 14px 0 0; } }
+  .hero { margin-top: 0; }
+  .contact { margin-top: 104px; }
+  .social img { width: 19px; height: 19px; display: block; }
+  .side .social img { width: 17px; height: 17px; }
+  .ph.portrait { border: 2px solid #A9D0EA; }
+  .ph.logo.has { background: #fff; }
+  .ph.logo img { object-fit: contain; padding: 8px; }
+  .pics { display: flex; gap: 10px; margin-bottom: 14px; }
+  .pics .ph { width: 96px; aspect-ratio: 1; }
+  .ws-pics { margin: 12px 0 0; }
+  /* DELVE card: pixel damage background */
+  .dmg-bg{position:relative;overflow:hidden;isolation:isolate}
+  .dmg-bg>*{position:relative;z-index:1}
+  .dmg-bg>canvas.dmg-pixels{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.6;pointer-events:none;-webkit-mask-image:linear-gradient(165deg,transparent 30%,#000 85%);mask-image:linear-gradient(165deg,transparent 30%,#000 85%)}
+  /* Photo rows: show the whole photo, landscape or portrait, at the same height */
+  .pics { flex-wrap: wrap; }
+  .pics .ph.has { width: auto; height: auto; aspect-ratio: auto; max-width: 100%; display: block; }
+  .pics .ph.has img { position: static; display: block; width: auto; height: 96px; max-width: 100%; object-fit: contain; }
+  /* Workshop photos: smaller than the others */
+  .pics.ws-pics { gap: 8px; }
+  .pics.ws-pics .ph:not(.has) { width: 64px; }
+  .pics.ws-pics .ph.has img { height: 64px; }
+  /* Off the radar: heading with three small photos to its right */
+  .hobbies { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; }
+  .hobbies > h2 { margin-bottom: 0; }
+  .pics.hob-pics { margin: 0; }
+  .pics.hob-pics[hidden] { display: none; }
+  .reveal { display: inline-flex; align-items: center; gap: 12px; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; text-align: left; }
+  .reveal i { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--card); border: 1px solid var(--line); transition: transform .2s, background .2s; }
+  .reveal i svg { width: 14px; height: 14px; }
+  .reveal:hover i { background: var(--third); border-color: var(--third); }
+  .reveal[aria-expanded="true"] i { transform: rotate(90deg); }
+  @media (prefers-reduced-motion: reduce) { .reveal i { transition: none; } }
+  /* Links in text: underline only shows when the mouse is over them.
+     Phones and tablets have no hover, so they keep the underline to show what can be tapped. */
+  @media (hover: hover) {
+    p a, h3 a { text-decoration-line: none; }
+    p a:hover, h3 a:hover, p a:focus-visible, h3 a:focus-visible { text-decoration-line: underline; text-decoration-color: var(--underline); }
+  }
 </style>
 </head>
 <body>
+<div class="shell">
 
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Anjita N. A., back to top">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="#fff" stroke="#0F2540" stroke-width="2"/><circle cx="16" cy="16" r="8.5" fill="none" stroke="#A9C7E4" stroke-width="1.5"/><path d="M16 16L26.5 9.5" stroke="#0F2540" stroke-width="2.5" stroke-linecap="round"/><circle cx="21.5" cy="8.5" r="3" fill="#F2B705"/></svg>
-      Anjita N. A.
+  <header class="side" id="side">
+    <a class="who" href="#top">
+      <span class="avatar" data-img="images/profile.jpg" data-alt="">A</span>
+      <span class="name"><strong>Anjita Neelatt Anilkumar</strong><span>Remote Sensing | Radar Aeroecology </span></span>
     </a>
-    <nav class="links" aria-label="Sections">
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 3h14M1 8h14M1 13h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      Menu
+    </button>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/anjita-neelatt/" aria-label="LinkedIn" title="LinkedIn">in</a>
+      <!-- HIDDEN BUTTONS: everything from here down to the closing arrow line is not shown on the site.
+           To show a button: 1) put your link in place of YOUR-...  2) cut that whole line and paste it below the closing arrow line.
+      <a href="https://scholar.google.com/citations?user=YOUR-ID" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3z"/><path d="M5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg></a>
+      -->
+      <a href="https://orcid.org/0000-0001-9831-5446" aria-label="ORCID" title="ORCID">iD</a>
+      <a href="https://github.com/AnjitaNeelatt" aria-label="GitHub" title="GitHub"><img src="https://cdn.simpleicons.org/github/F4F6F9" alt=""></a>
+      <a href="mailto:anjitaneelatt@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    </div>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#top">Home</a>
+      <p>My research</p>
+      <a href="#updates">Updates</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
-      <a href="#talks">Talks</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#background">Background</a>
-      <a href="#contact">Contact</a>
+      <p>My work</p>
+      <a href="#talks">Conference presentations</a>
+      <a href="#teaching">Teaching experience</a>
+      <a href="#background">Education and skills</a>
+      <p>Connect</p>
+      <a href="#hobbies">Off the radar</a>
+      <a href="#contact">Contact me</a>
     </nav>
-    <a class="btn primary sm" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
-  </div>
-</header>
+    <!-- Add your CV to the repository as cv.pdf for this button to work -->
+    <a class="btn" href="cv.pdf">Download CV</a>
+  </header>
 
-<main>
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div class="intro">
-      <div class="who">
-        <span class="avatar" id="avatar"><span class="mono" aria-hidden="true">AN</span><img id="photo" src="images/profile.jpg" alt="Portrait of Anjita Neelatt Anilkumar" width="76" height="76"></span>
-        <p>Remote Sensing, Department of Civil Engineering<br>Indian Institute of Technology Bombay</p>
+  <main id="top">
+
+    <!-- ================= Hero ================= -->
+    <section class="hero" aria-label="Introduction">
+      <div class="ph portrait" data-img="images/profile.jpg" data-alt="Portrait of Anjita Neelatt Anilkumar"><span><b>Your photo</b>images/profile.jpg</span></div>
+      <div class="hero-text">
+        <h1>Hello, I'm Anjita.</h1>
+        <p class="lede">I study what radars can tell us about the atmosphere and the life that moves through it. My Ph.D. has been all about detecting and tracking desert locust swarms on weather radar, and using remote sensing to help tackle the problem.</p>
+                <p class="more">I'm currently wrapping up my Ph.D. at <a href="https://www.iitb.ac.in/">IIT Bombay</a> with <a href="https://drinduj.in/">Prof. J. Indu</a>, and I'll submit my thesis in early 2027. Next, I'd love to take these tools further, to birds, other insects and new remote sensing questions, and see them put to work in the real world.</p>
       </div>
-      <h1 class="name">Anjita Neelatt Anilkumar</h1>
-      <p class="lead">I find desert locust swarms on Doppler weather radar and measure the crop damage they leave with satellite data, so that early warnings can reach farmers sooner.</p>
-      <div class="now"><span class="dot" aria-hidden="true"></span><p><strong>Open to postdoctoral positions.</strong> PhD thesis submission before January 2027. Available to start remotely now and to relocate in early 2027.</p></div>
-      <!-- EDIT: your main links -->
-      <div class="btns">
-        <a class="btn primary" href="cv.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>Download CV</a>
-        <a class="btn" href="https://scholar.google.com/citations?user=R3qMy7QAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="btn" href="https://www.linkedin.com/in/anjita-neelatt/" target="_blank" rel="noopener">LinkedIn</a>
+    </section>
+
+    <!-- ================= Updates ================= -->
+    <section id="updates">
+      <h2>Updates</h2>
+      <div class="grid">
+        <article class="card app dmg-bg">
+          <div class="ph" data-img="images/delve.jpg" data-alt="Screenshot of the DELVE app"><span><b>Picture</b>images/delve.jpg</span></div>
+          <p class="kicker"><i></i>Web app</p>
+          <h3>DELVE</h3>
+          <p class="small">A public Google Earth Engine app that maps vegetation damage after a swarm passes.</p>
+          <p class="small"><a href="https://ee-anjitaneelatt.projects.earthengine.app/view/desert-locust-damage-explorer">Open DELVE</a></p>
+        </article>
+        <article class="card">
+          <div class="pics">
+            <div class="ph" data-img="images/irac1.jpg" data-alt="Anjita presenting in Amsterdam"><span><b>Picture</b>images/talk.jpg</span></div>
+            <div class="ph" data-img="images/irac2.jpg" data-alt="At the Radar Aeroecology Conference in Amsterdam"><span><b>Picture</b>images/talk-2.jpg</span></div>
+          </div>
+          <p class="kicker"><i></i>Recent conference presentation</p>
+          <h3>Radar Aeroecology Conference, Amsterdam</h3>
+          <p class="small">Oral presentation on desert locust surveillance with Doppler weather radar, June 2026.</p>
+          <p><a href="https://www.youtube.com/watch?v=2hZarChiu2U">Watch the presentation on YouTube (00:00 to 11:35)</a> </p>
+          <p class="small"><a href="https://hirad.science/irac-2026/">Conference website</a></p>
+        </article>
       </div>
-      <div class="alt-links">
-        <span class="lbl">Also on</span>
-        <a href="https://orcid.org/0000-0001-9831-5446" target="_blank" rel="noopener">ORCID</a>
-        <a href="https://github.com/AnjitaNeelatt" target="_blank" rel="noopener">GitHub</a>
-        <a href="#contact">Email</a>
+    </section>
+
+    <!-- ================= Research ================= -->
+    <section id="research">
+      <h2>Ph.D. Research</h2>
+      <div class="themes">
+        <article class="card">
+          <div class="ph" data-img="images/paper1.png" data-alt="Radar image of a swarm"><span><b>Picture</b>images/paper1.png</span></div>
+          <h3>Desert locust swarms on weather radars</h3>
+          <p>Desert locust swarm echoes on S-band single-pol and C-band dual-pol Doppler weather radars, and what they reveal about swarm behaviour.</p>
+        </article>
+        <article class="card">
+          <div class="ph" data-img="images/paper2.png" data-alt="Deep learning detection result"><span><b>Picture</b>images/paper2.png</span></div>
+          <h3>Deep learning for early warning</h3>
+          <p>An SE-ResNet model that detects swarm echoes in near real time, so operational radars can feed early warning and control operations.</p>
+        </article>
+        <article class="card">
+          <div class="ph" data-img="images/paper3.jpg" data-alt="Habitat suitability map"><span><b>Picture</b>images/paper3.jpg</span></div>
+          <h3>Habitat suitability</h3>
+          <p>Maxent habitat suitability maps that show where swarms are likely, and how well Maxent transfers from one year to the next.</p>
+        </article>
+        <article class="card">
+          <div class="ph" data-img="images/paper4.png" data-alt="Vegetation damage map"><span><b>Picture</b>images/paper4.png</span></div>
+          <h3>Measuring the damage</h3>
+          <p>DELVE, a Google Earth Engine app that maps vegetation damage after a swarm from pixel-wise NDVI anomalies.</p>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <figure class="scope-fig">
-      <div class="seg" role="group" aria-label="Radar product shown">
-        <button type="button" data-mode="class" aria-pressed="true">Dual-pol classes</button>
-        <button type="button" data-mode="z" aria-pressed="false">Reflectivity only</button>
-      </div>
-      <svg id="scope" viewBox="-260 -260 520 520" role="img" aria-label="Illustrative weather radar scan with a locust swarm, a rain cell and a dust plume"></svg>
-      <div class="readout cond" aria-hidden="true"><span id="ro-az">Beam 000°</span><span id="ro-hit">Scanning</span></div>
-      <div class="legend" id="legend"></div>
-      <figcaption><span id="cap"></span><span class="note">Illustrative scan drawn for this site, not observed data.</span></figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- EDIT: news -->
-<section class="band" id="news">
-  <div class="wrap">
-    <div class="head"><h2>Latest</h2></div>
-    <ol class="news" id="news-list"></ol>
-  </div>
-</section>
-
-<!-- EDIT: research -->
-<section class="band sky rings" id="research">
-  <div class="wrap">
-    <div class="head">
-      <h2>From radar echo to damage map</h2>
-      <p class="sec-intro">Swarms move fast and cross borders, and ground surveys see only part of the picture. My PhD builds a chain from detection to damage assessment using India's operational weather radars and satellite data in Google Earth Engine.</p>
-    </div>
-    <ol class="stages">
-      <li>
-        <span class="pict"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="11" fill="#fff"/><path d="M19 34l-4 22M29 34l4 22M17 46h14"/><path d="M41 16a13 13 0 0 1 0 16M47 11a21 21 0 0 1 0 26"/><circle cx="57" cy="24" r="3.5" fill="#F2B705" stroke="none"/></svg></span>
-        <h3>Detect</h3>
-        <p>Locate swarm echoes on single- and dual-polarisation Doppler weather radars.</p>
-        <p class="src"><a href="https://doi.org/10.1038/s41598-024-81553-1" target="_blank" rel="noopener">Scientific Reports, 2024</a>, <a href="https://doi.org/10.1016/j.rsase.2023.100983" target="_blank" rel="noopener">RSASE, 2023</a></p>
-      </li>
-      <li>
-        <span class="pict"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 18L32 12M12 18L32 26M12 18L32 38M12 32L32 12M12 32L32 26M12 32L32 38M12 32L32 52M12 46L32 26M12 46L32 38M12 46L32 52M32 12L52 32M32 26L52 32M32 38L52 32M32 52L52 32" stroke-width="1.4" opacity=".7"/><g fill="#fff"><circle cx="12" cy="18" r="4.5"/><circle cx="12" cy="32" r="4.5"/><circle cx="12" cy="46" r="4.5"/><circle cx="32" cy="12" r="4.5"/><circle cx="32" cy="26" r="4.5"/><circle cx="32" cy="38" r="4.5"/><circle cx="32" cy="52" r="4.5"/></g><circle cx="52" cy="32" r="6" fill="#F2B705"/></svg></span>
-        <h3>Identify</h3>
-        <p>A deep learning framework picks out swarm echoes in near real time from dual-polarisation data.</p>
-        <p class="src">Paper under review (2026). Related: IEEE InGARSS 2026.</p>
-      </li>
-      <li>
-        <span class="pict"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M8 40c4-15 19-24 32-19s17 17 11 25-28 10-37 4z" fill="#fff"/><path d="M19 39c3-8 13-13 20-10s9 11 4 15-18 5-23 1z"/><path d="M29 37c2-4 7-5 9-2s1 6-2 7-8-1-7-5z" fill="#F2B705"/></svg></span>
-        <h3>Anticipate</h3>
-        <p>Maxent habitat models show where swarms are likely to settle. Land surface temperature, NDVI and soil type are the top predictors.</p>
-        <p class="src"><a href="https://doi.org/10.1007/s40808-025-02701-8" target="_blank" rel="noopener">Modeling Earth Systems and Environment, 2026</a></p>
-      </li>
-      <li>
-        <span class="pict"><svg viewBox="0 0 64 64" stroke="#0F2540" stroke-width="2" aria-hidden="true"><g fill="#fff"><rect x="10" y="10" width="11" height="11"/><rect x="21" y="10" width="11" height="11"/><rect x="43" y="10" width="11" height="11"/><rect x="10" y="21" width="11" height="11"/><rect x="43" y="21" width="11" height="11"/><rect x="10" y="32" width="11" height="11"/><rect x="10" y="43" width="11" height="11"/><rect x="21" y="43" width="11" height="11"/><rect x="43" y="43" width="11" height="11"/></g><g fill="#C98D52"><rect x="32" y="10" width="11" height="11"/><rect x="21" y="21" width="11" height="11"/><rect x="32" y="21" width="11" height="11"/><rect x="21" y="32" width="11" height="11"/><rect x="43" y="32" width="11" height="11"/><rect x="32" y="43" width="11" height="11"/></g><rect x="32" y="32" width="11" height="11" fill="#9C5B2E"/></svg></span>
-        <h3>Assess</h3>
-        <p>DELVE, a public Google Earth Engine app, maps vegetation damage from pixel-wise NDVI anomalies after an event.</p>
-        <p class="src"><a href="https://ee-anjitaneelatt.projects.earthengine.app/view/desert-locust-damage-explorer" target="_blank" rel="noopener">Open the DELVE app</a></p>
-      </li>
-    </ol>
-
-    <div class="delve">
-      <div>
-        <h3>Try DELVE in your browser</h3>
-        <p>DEsert Locust VEgetation damage assessment. The app maps pixel-wise NDVI anomalies, the drop in greenness against normal conditions, to show where vegetation was hit after a swarm passed. It runs on Google Earth Engine, so there is nothing to install.</p>
-        <div class="btns">
-          <a class="btn primary" href="https://ee-anjitaneelatt.projects.earthengine.app/view/desert-locust-damage-explorer" target="_blank" rel="noopener">Open DELVE</a>
-        </div>
-      </div>
-      <div>
-        <svg id="ndvi" viewBox="0 0 560 280" role="img" aria-label="Illustration of a pixel grid where a patch of negative NDVI anomaly marks swarm damage"></svg>
-        <div class="ndvi-key"><span>Greenness lost</span><span>No change</span><span>Greenness gained</span></div>
-      </div>
-    </div>
-
-    <div class="fineprint">
-      <p>Supported by the MHRD PhD fellowship and carried out under the Ministry of Earth Sciences project MoES/16/03/2022-RDESS/AI-ML-3, Government of India.</p>
-      <p>Earlier, at NITK, I assessed the vulnerability of the Kasaragod coast in Kerala using eleven physical and socioeconomic variables (<a href="https://doi.org/10.1007/s44218-025-00096-8" target="_blank" rel="noopener">Anthropocene Coasts, 2025</a>).</p>
-    </div>
-  </div>
-</section>
-
-<!-- EDIT: publications -->
-<section class="band" id="publications">
-  <div class="wrap">
-    <div class="head">
+    <!-- ================= Publications ================= -->
+    <section id="publications">
       <h2>Publications</h2>
-      <p class="sec-intro">Full list with citations on <a href="https://scholar.google.com/citations?user=R3qMy7QAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
-    </div>
-    <div class="filters" id="filters" role="group" aria-label="Filter publications"></div>
-    <ol class="pubs" id="pubs"></ol>
-  </div>
-</section>
 
-<!-- EDIT: talks -->
-<section class="band sky rings" id="talks">
-  <div class="wrap cols">
-    <div>
-      <div class="head"><h2>Talks</h2><p class="key"><span><i class="k-oral"></i>Oral</span><span><i class="k-poster"></i>Poster</span><span><i class="k-award"></i>Award</span></p></div>
-      <ol class="list tl" id="talk-list"></ol>
-    </div>
-    <div>
-      <div class="head"><h2>Workshops</h2></div>
-      <ol class="list tl" id="ws-list"></ol>
-      <div class="head" style="margin-top:56px"><h2>Recognition</h2></div>
-      <ol class="list tl">
-        <li class="hot"><time>Mar 2021</time><div><p class="tt">Best Presentation Award</p><p class="vv">HYDRO-2020, 25th International Conference, NIT Rourkela</p></div></li>
-        <li class="ring"><time>2021 to now</time><div><p class="tt">MHRD PhD fellowship</p><p class="vv">Government of India, for the PhD at IIT Bombay</p></div></li>
-      </ol>
-    </div>
-  </div>
-</section>
+      <p class="sub">2026</p>
+      <ul class="list pubs">
+        <li>
+          <div>
+            <h3>DELVE: DEsert Locust VEgetation Damage Assessment from pixel-wise NDVI anomalies in Google Earth Engine</h3>
+            <p><b>Anjita, N. A.</b>, Nitish, K., &amp; Indu, J.</p>
+            <p><span class="tag wait">In preparation</span></p>
+            <a class="pill" href="https://ee-anjitaneelatt.projects.earthengine.app/view/desert-locust-damage-explorer">https://ee-anjitaneelatt.projects.earthengine.app/view/desert-locust-damage-explorer</a>
+          </div>
+        </li>
+        
+        <li>
+          <div>
+            <h3>Polarimetric signatures of meteorological and non-meteorological scatterers in operational C-band radar over New Delhi</h3>
+            <p><b>Anjita, N. A.</b>, &amp; Indu, J.</p>
+            <p><span class="tag wait">Accepted</span>IEEE India Geoscience and Remote Sensing Symposium (InGARSS 2026), Hyderabad</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Deep learning-based desert locust swarm detection using dual-polarisation weather radar for agricultural early warning</h3>
+            <p><b>Anjita, N. A.</b>, Banerjee, B., &amp; Indu, J.</p>
+            <p><span class="tag wait">Submitted</span></p>
+          </div>
+        </li>
+      </ul>
 
-<!-- EDIT: teaching -->
-<section class="band" id="teaching">
-  <div class="wrap">
-    <div class="head"><h2>Teaching</h2><p class="sec-intro">Helping students read the microwave part of the spectrum, from radar basics to image processing.</p></div>
-    <ul class="teach">
-      <li><span class="when">2023 to present</span><h3>Teaching Assistant, NPTEL</h3><p><strong>Beginner's Guide to Weather Radars</strong> (goes live in 2027): lecture materials and quizzes.</p><p><strong>Microwave Remote Sensing in Hydrology</strong>: weekly assignments and student queries.</p></li>
-      <li><span class="when">2021 to 2026</span><h3>Teaching Assistant, IIT Bombay</h3><p><strong>Microwave Remote Sensing</strong> and <strong>Digital Image Processing of Remotely Sensed Data</strong>: programming tutorials, quizzes and assignments.</p></li>
-      <li><span class="when">2020 to 2021</span><h3>Assistant Professor, Toc&nbsp;H Institute of Science and Technology, Kerala</h3><p>Engineering Mechanics, GIS, Environmental Health and Safety, Survey Lab. Thesis supervision, Mapathon Keralam, and the Periyar river pollution abatement project with the Kerala Water Resources Department.</p></li>
-    </ul>
-  </div>
-</section>
+      <p class="sub">2025</p>
+      <ul class="list pubs">
+        <li>
+          <div>
+            <h3><a href="https://doi.org/10.1007/s40808-025-02701-8">A Maxent-based framework for modelling desert locust habitat suitability: balancing accuracy and temporal transferability</a></h3>
+            <p><b>Anjita, N. A.</b>, Banerjee, B., &amp; Jayaluxmi, I.</p>
+            <p><span class="tag">Published</span>Modeling Earth Systems and Environment, 12(1), 57</p>
+            <a class="pill" href="https://doi.org/10.1007/s40808-025-02701-8">https://doi.org/10.1007/s40808-025-02701-8</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3><a href="https://doi.org/10.1007/s44218-025-00096-8">Coastal vulnerability assessment of the Kasaragod Coast in Kerala, West Coast of India</a></h3>
+            <p><b>Anjita, N. A.</b>, Makhdumi, W., Dwarakish, G. S., &amp; Pai B, J.</p>
+            <p><span class="tag">Published</span>Anthropocene Coasts, 8(1), 38</p>
+            <a class="pill" href="https://doi.org/10.1007/s44218-025-00096-8">https://doi.org/10.1007/s44218-025-00096-8</a>
+          </div>
+        </li>
+      </ul>
 
-<!-- EDIT: background -->
-<section class="band sky rings" id="background">
-  <div class="wrap cols">
-    <div>
-      <div class="head"><h2>Education</h2></div>
-      <ol class="list tl">
-        <li class="ring"><time>2021 to now</time><div><p class="tt">PhD, Remote Sensing, IIT Bombay</p><p class="vv">Doppler Weather Radar and Satellite Remote Sensing Approaches to India's Desert Locust Challenge. Advisor: Prof. J. Indu.</p></div></li>
-        <li><time>2019</time><div><p class="tt">Research intern, IIT Bombay</p><p class="vv">Detected stationary aircraft in aerial images with an SVM trained on HOG features.</p></div></li>
-        <li><time>2018 to 2020</time><div><p class="tt">MTech, Remote Sensing and GIS, NIT Karnataka</p><p class="vv">Coastal Vulnerability Assessment of the Kasaragod Coast in Kerala. Advisor: Prof. G. S. Dwarakish.</p></div></li>
-        <li><time>2013 to 2017</time><div><p class="tt">BTech, Civil Engineering, FISAT, Kerala</p><p class="vv">Prediction of Compaction Parameters of Soil Using Genetic Algorithm.</p></div></li>
-      </ol>
-    </div>
-    <div>
-      <div class="block"><p class="col-title">Methods</p><div class="skills"><span>Doppler weather radar</span><span>Dual-polarisation radar</span><span>Deep learning</span><span>Species distribution modelling</span><span>NDVI anomaly analysis</span><span>Coastal vulnerability indices</span></div></div>
-      <div class="block"><p class="col-title">Programming</p><div class="skills"><span>Python</span><span>R</span><span>Google Earth Engine</span></div></div>
-      <div class="block"><p class="col-title">Software</p><div class="skills"><span>QGIS</span><span>ArcGIS</span><span>ERDAS Imagine</span><span>SNAP</span></div></div>
-    </div>
-  </div>
-</section>
+      <p class="sub">2024</p>
+      <ul class="list pubs">
+        <li>
+          <div>
+            <h3><a href="https://doi.org/10.1038/s41598-024-81553-1">Doppler weather radars as a game changer in desert locust swarm tracking</a></h3>
+            <p><b>Anjita, N. A.</b>, Indu, J., Thiruvengadam, P., Dixit, V., Rastogi, A., &amp; Arul Malar Kannan, B. S.</p>
+            <p><span class="tag">Published</span>Scientific Reports, 14(1), 31715</p>
+            <a class="pill" href="https://doi.org/10.1038/s41598-024-81553-1">https://doi.org/10.1038/s41598-024-81553-1</a>
+          </div>
+        </li>
+      </ul>
 
-<!-- EDIT: contact -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <h2>Get in touch</h2>
-    <p class="sec-intro">I'm glad to hear about collaborations, radar data questions and postdoctoral positions.</p>
-    <div class="mail"><a href="mailto:anjitaneelatt@gmail.com">anjitaneelatt@gmail.com</a><button class="chip" type="button" data-copy="anjitaneelatt@gmail.com" data-msg="Email address copied">Copy</button></div>
-    <p class="muted">Department of Civil Engineering, IIT Bombay, Powai, Mumbai 400076, India</p>
-    <div class="btns" style="justify-content:center">
-      <a class="btn primary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
-      <a class="btn" href="https://scholar.google.com/citations?user=R3qMy7QAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <a class="btn" href="https://www.linkedin.com/in/anjita-neelatt/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://orcid.org/0000-0001-9831-5446" target="_blank" rel="noopener">ORCID</a>
-      <a class="btn" href="https://github.com/AnjitaNeelatt" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</section>
-</main>
+      <p class="sub">2023</p>
+      <ul class="list pubs">
+        <li>
+          <div>
+            <h3><a href="https://doi.org/10.1016/j.rsase.2023.100983">Leveraging weather radars for desert locust monitoring</a></h3>
+            <p><b>Anjita, N. A.</b>, &amp; Indu, J.</p>
+            <p><span class="tag">Published</span>Remote Sensing Applications: Society and Environment, 31, 100983</p>
+            <a class="pill" href="https://doi.org/10.1016/j.rsase.2023.100983">https://doi.org/10.1016/j.rsase.2023.100983</a>
+          </div>
+        </li>
+      </ul>
 
-<footer>
-  <div class="wrap"><span>© 2026 Anjita Neelatt Anilkumar. Last updated November 2026.</span><span>The radar scan and NDVI grid are illustrations. <a href="#top">Back to top</a></span></div>
-</footer>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- ================= Talks ================= -->
+    <section id="talks">
+      <h2>Conference presentations and posters</h2>
+      <p class="sub">Oral presentations</p>
+      <ul class="list">
+        <li>
+          <span class="yr">2026</span>
+          <div>
+            <h3>Advancing desert locust surveillance through Doppler weather radar observations</h3>
+            <p>5th International Radar Aeroecology Conference, Amsterdam, the Netherlands</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2024</span>
+          <div>
+            <h3>Tracking desert locust swarms using Doppler weather radars</h3>
+            <p>AGU Fall Meeting, 2024AGUFMB42A...03N</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2021</span>
+          <div>
+            <h3>Study of shoreline change along Kasaragod district in Kerala, West Coast of India</h3>
+            <p>HYDRO-2020, National Institute of Technology Rourkela <span class="tag" style="margin-left:6px">Best Presentation Award</span></p>
+          </div>
+        </li>
+      </ul>
+      <p class="sub">Posters</p>
+      <ul class="list">
+        <li>
+          <span class="yr">2022</span>
+          <div>
+            <h3>Locust swarm signatures using weather radars</h3>
+            <p>AGU Fall Meeting, 2022AGUFM.B24A..06N</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2019</span>
+          <div>
+            <h3>Aircraft detection from a UAV image</h3>
+            <p>4th ISSE National Conference INAC-2019, Space Applications Centre, ISRO, Ahmedabad</p>
+          </div>
+        </li>
+      </ul>
+      <p class="sub">Workshops</p>
+      <ul class="list">
+        <li>
+          <span class="yr">2026</span>
+          <div>
+            <h3>Radar Aeroecology Workshop</h3>
+            <p>Amsterdam, the Netherlands</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2025</span>
+          <div>
+            <h3>National Training Workshop on Weather Radar</h3>
+            <p><a href="https://tropmet.res.in/236-event_details">Theory, calibration, maintenance, data analysis and applications. IITM, Pune</a></p>
+            <div class="pics ws-pics">
+              <div class="ph" data-img="images/workshop1.png" data-alt="At the National Training Workshop on Weather Radar, IITM Pune"><span><b>Picture</b>images/workshop1.png</span></div>
+        
+            </div>
+            
+          </div>
+        </li>
+        <li>
+          <span class="yr">2024</span>
+          <div>
+            <h3>Quantitative Precipitation Estimation: A Focus on Weather Radar Hydrology</h3>
+            <p>Organising committee member. IIT Bombay</p>
+            <!-- Photos: add images/workshop-qpe-1.jpg and images/workshop-qpe-2.jpg. Link: replace PASTE-WORKSHOP-QPE-LINK -->
+            <div class="pics ws-pics">
+              <div class="ph" data-img="images/workshop2.jpeg" data-alt="At the Quantitative Precipitation Estimation workshop, IIT Bombay"><span><b>Picture</b>images/workshop2.jpeg</span></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= Teaching ================= -->
+    <section id="teaching">
+      <h2>Teaching experience</h2>
+      <ul class="list">
+        <li>
+          <span class="yr">2023 to now</span>
+          <div>
+            <h3>Teaching assistant, NPTEL</h3>
+            <p>Beginner's Guide to Weather Radars (going live in 2027) and <a href="https://nptel.ac.in/courses/105101213">Microwave Remote Sensing in Hydrology</a>. I help prepare lecture materials and quizzes, set weekly assignments and answer student questions.</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2021 to 2026</span>
+          <div>
+            <h3>Teaching assistant, IIT Bombay</h3>
+            <p>Microwave Remote Sensing and Digital Image Processing of Remotely Sensed Data. I delivered programming tutorials and prepared quizzes and assignments.</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2020 to 2021</span>
+          <div>
+            <h3>Assistant Professor, <a href="https://tistcochin.edu.in/">Toc H Institute of Science and Technology</a>, Kerala</h3>
+            <p>Taught Engineering Mechanics, Geographic Information Systems, Environmental Health and Safety, and Survey Lab. Supervised theses and contributed to Mapathon Keralam and the Periyar river pollution abatement project with the Kerala Water Resources Department.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= Education and skills ================= -->
+    <section id="background">
+      <h2>Education and skills</h2>
+      <ul class="list">
+        <li>
+          <span class="yr">2021 to now</span>
+          <div>
+            <h3>Ph.D., Remote Sensing, Indian Institute of Technology Bombay</h3>
+            <p>Thesis: Doppler Weather Radar and Satellite Remote Sensing Approaches to India's Desert Locust Challenge. Advisor: Prof. J. Indu.</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2018 to 2020</span>
+          <div>
+            <h3>M.Tech, Remote Sensing and GIS, National Institute of Technology Karnataka</h3>
+            <p>Thesis: Coastal Vulnerability Assessment of the Kasaragod Coast in Kerala. Advisor: Prof. G. S. Dwarakish.</p>
+          </div>
+        </li>
+        <li>
+          <span class="yr">2013 to 2017</span>
+          <div>
+            <h3>B.Tech, Civil Engineering, Federal Institute of Science and Technology, Kerala</h3>
+            <p>Thesis: Prediction of Compaction Parameters of Soil Using Genetic Algorithm.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="card" style="margin-top:16px">
+        <h3 class="h">Programming</h3>
+        <ul class="chips"><li>Python</li><li>R</li><li>Google Earth Engine</li></ul>
+        <h3 class="h">Software</h3>
+        <ul class="chips"><li>QGIS</li><li>ArcGIS</li><li>ERDAS Imagine</li><li>SNAP</li></ul>
+      </div>
+    </section>
+
+    <!-- ================= Off the radar: hobbies ================= -->
+    <!-- Photos: add images/violin.jpg, images/beaded-flowers.jpg and images/crochet.jpg -->
+    <section id="hobbies" class="hobbies">
+      <h2><button class="reveal" type="button" aria-expanded="false" aria-controls="hob-pics">Off the radar <i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></i></button></h2>
+      <div class="pics hob-pics" id="hob-pics" hidden>
+        <div class="ph" data-img="images/violin.png" data-alt="Violin"><span><b>Picture</b>images/violin.png</span></div>
+        <div class="ph" data-img="images/beaded-flowers.jpeg" data-alt="Beaded flowers"><span><b>Picture</b>images/beaded-flowers.jpeg</span></div>
+        <div class="ph" data-img="images/crochet.jpeg" data-alt="Crochet"><span><b>Picture</b>images/crochet.jpeg</span></div>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section id="contact" class="contact">
+      <h2>Get in touch</h2>
+      <p>I am happy to talk about radar aeroecology, locust monitoring, collaborations and postdoctoral opportunities. I am based at IIT Bombay in Mumbai, India.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:anjitaneelatt@gmail.com">anjitaneelatt@gmail.com</a>
+        <a class="btn ghost" href="cv.pdf">Download CV</a>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/anjita-neelatt/" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <!-- HIDDEN BUTTONS: everything from here down to the closing arrow line is not shown on the site.
+             To show a button: 1) put your link in place of YOUR-...  2) cut that whole line and paste it below the closing arrow line.
+        <a href="https://scholar.google.com/citations?user=YOUR-ID" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3z"/><path d="M5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg></a>
+        -->
+        <a href="https://orcid.org/0000-0001-9831-5446" aria-label="ORCID" title="ORCID">iD</a>
+        <a href="https://github.com/AnjitaNeelatt" aria-label="GitHub" title="GitHub"><img src="https://cdn.simpleicons.org/github/F4F6F9" alt=""></a>
+        <a href="mailto:anjitaneelatt@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </section>
+
+    <footer>© 2026 Anjita Neelatt Anilkumar</footer>
+  </main>
+</div>
 
 <script>
-{
-/* ===== EDIT YOUR CONTENT HERE ===== */
-const ME = 'Anjita, N. A.';
-const NEWS = [ /* newest first. tag: Milestone, Paper, Talk or Tool */
-  {d:'Sep 2026', tag:'Milestone', t:'Pre-synopsis seminar completed. PhD thesis submission before January 2027.'},
-  {d:'Jun 2026', tag:'Talk', t:'Gave an oral talk at the 5th International Radar Aeroecology Conference in Amsterdam and joined the Radar Aeroecology Workshop.'},
-  {d:'2026', tag:'Paper', t:'Accepted at IEEE InGARSS 2026, Hyderabad: polarimetric signatures of rain, dust and swarms on an operational C-band radar over New Delhi.'},
-  {d:'2026', tag:'Paper', t:'Deep learning swarm detection with dual-polarisation weather radar submitted for review.'},
-  {d:'2026', tag:'Paper', t:'Maxent habitat suitability framework published in <a href="https://doi.org/10.1007/s40808-025-02701-8" target="_blank" rel="noopener">Modeling Earth Systems and Environment</a>.'},
-  {d:'2026', tag:'Tool', t:'<a href="https://ee-anjitaneelatt.projects.earthengine.app/view/desert-locust-damage-explorer" target="_blank" rel="noopener">DELVE</a>, the swarm damage explorer, is live on Google Earth Engine.'}
-];
-const PUBS = [
-  {y:2026, kind:'journal', status:'Published', au:['Anjita, N. A.','Banerjee, B.','Jayaluxmi, I.'], t:'A Maxent-based framework for modelling desert locust habitat suitability: balancing accuracy and temporal transferability', j:'Modeling Earth Systems and Environment', v:'12', n:'1', p:'57', doi:'10.1007/s40808-025-02701-8', key:'anjita2026maxent'},
-  {y:2025, kind:'journal', status:'Published', au:['Anjita, N. A.','Makhdumi, W.','Dwarakish, G. S.','Pai B, J.'], t:'Coastal vulnerability assessment of the Kasaragod Coast in Kerala, West Coast of India', j:'Anthropocene Coasts', v:'8', n:'1', p:'38', doi:'10.1007/s44218-025-00096-8', key:'anjita2025coastal'},
-  {y:2024, kind:'journal', status:'Published', au:['Anjita, N. A.','Indu, J.','Thiruvengadam, P.','Dixit, V.','Rastogi, A.','Arul Malar Kannan, B. S.'], t:'Doppler weather radars as a game changer in desert locust swarm tracking', j:'Scientific Reports', v:'14', n:'1', p:'31715', doi:'10.1038/s41598-024-81553-1', key:'anjita2024doppler'},
-  {y:2023, kind:'journal', status:'Published', au:['Anjita, N. A.','Indu, J.'], t:'Leveraging weather radars for desert locust monitoring', j:'Remote Sensing Applications: Society and Environment', v:'31', p:'100983', doi:'10.1016/j.rsase.2023.100983', key:'anjita2023leveraging'},
-  {y:2026, kind:'conference', status:'Accepted', au:['Anjita, N. A.','Indu, J.'], t:'Polarimetric signatures of meteorological and non-meteorological scatterers in operational C-band radar over New Delhi', j:'IEEE India Geoscience and Remote Sensing Symposium (InGARSS 2026), Hyderabad, India', key:'anjita2026polarimetric', conf:true},
-  {y:2026, kind:'progress', status:'Under review', au:['Anjita, N. A.','Banerjee, B.','Indu, J.'], t:'Deep learning-based desert locust swarm detection using dual-polarisation weather radar for agricultural early warning'},
-  {y:2026, kind:'progress', status:'In preparation', au:['Anjita, N. A.','Nitish, K.','Indu, J.'], t:'DELVE: DEsert Locust VEgetation Damage Assessment from pixel-wise NDVI anomalies in Google Earth Engine', url:'https://ee-anjitaneelatt.projects.earthengine.app/view/desert-locust-damage-explorer', urlLabel:'Open app'}
-];
-/* Leave href empty ('') for links you have not added yet. */
-const TALKS = [
-  {d:'Jun 2026', k:'Oral', t:'Advancing desert locust surveillance through Doppler weather radar observations', v:'5th International Radar Aeroecology Conference, Amsterdam, the Netherlands', links:[{l:'Abstract',h:''},{l:'Slides',h:''}]},
-  {d:'Dec 2024', k:'Oral', t:'Tracking desert locust swarms using Doppler weather radars (DWR)', v:'AGU Fall Meeting 2024, B42A-03', links:[{l:'Abstract',h:''}]},
-  {d:'Dec 2022', k:'Poster', t:'Locust swarm signatures using weather radars', v:'AGU Fall Meeting 2022, B24A-06', links:[{l:'Abstract',h:''},{l:'Poster',h:''}]},
-  {d:'Mar 2021', k:'Oral', t:'Study of shoreline change along Kasaragod District in Kerala, West Coast of India', v:'HYDRO-2020, 25th International Conference on Hydraulics, Water Resources and Coastal Engineering, NIT Rourkela', award:'Best Presentation Award', links:[{l:'Proceedings',h:''}]},
-  {d:'Sep 2019', k:'Poster', t:'Aircraft detection from a UAV image', v:'INAC-2019, 4th ISSE National Conference, Space Applications Centre, ISRO, Ahmedabad', links:[]}
-];
-const WORKSHOPS = [
-  {d:'Jun 2026', t:'Radar Aeroecology Workshop', v:'Amsterdam, the Netherlands'},
-  {d:'Apr 2025', t:'National Training Workshop on Weather Radar: Theory, Calibration, Maintenance, Data Analysis and Applications', v:'IITM, Pune'},
-  {d:'Jun 2024', t:'Organising committee, Quantitative Precipitation Estimation: A Focus on Weather Radar Hydrology', v:'IIT Bombay'}
-];
-/* ===== END OF CONTENT ===== */
+  // Picture slots: each one shows its image as soon as a file with that name exists in the images folder
+  document.querySelectorAll('[data-img]').forEach(function (el) {
+    var img = new Image();
+    img.onload = function () { el.textContent = ''; el.appendChild(img); el.classList.add('has'); };
+    img.alt = el.getAttribute('data-alt') || '';
+    img.src = el.getAttribute('data-img');
+  });
 
-const $ = (s, r = document) => r.querySelector(s);
-const toastEl = $('#toast');
-let toastTimer;
-function toast(msg) {
-  toastEl.textContent = msg;
-  toastEl.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2200);
-}
-async function copyText(text, msg) {
-  try { await navigator.clipboard.writeText(text); toast(msg); }
-  catch (e) {
-    const ta = document.createElement('textarea');
-    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
-    document.body.appendChild(ta); ta.select();
-    let ok = false; try { ok = document.execCommand('copy'); } catch (e2) {}
-    ta.remove();
-    toast(ok ? msg : 'Copy is blocked here. Select the text instead.');
+  // Phone menu
+  var side = document.getElementById('side'), btn = document.getElementById('menuBtn');
+  btn.addEventListener('click', function () {
+    var open = side.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  var links = [].slice.call(document.querySelectorAll('.nav a'));
+  links.forEach(function (a) {
+    a.addEventListener('click', function () { side.classList.remove('open'); btn.setAttribute('aria-expanded', false); });
+  });
+
+  // Highlight the section being read
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var id = e.target.id === 'top' ? 'top' : e.target.id;
+        links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + id); });
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (el) { io.observe(el); });
+    links[0].classList.add('on');
+    var hero = document.querySelector('.hero'); hero.id = 'top'; document.querySelector('main').removeAttribute('id'); io.observe(hero);
   }
-}
 
-/* photo fallback */
-const photo = $('#photo'), avatar = $('#avatar');
-const noPhoto = () => avatar.classList.add('noimg');
-photo.addEventListener('error', noPhoto);
-if (photo.complete && !photo.naturalWidth) noPhoto();
+  // Off the radar: the photos stay hidden until the heading is clicked (the menu link opens them too)
+  var reveal = document.querySelector('.reveal');
+  if (reveal) {
+    var hobPics = document.getElementById(reveal.getAttribute('aria-controls'));
+    var setOpen = function (open) { reveal.setAttribute('aria-expanded', open); hobPics.hidden = !open; };
+    reveal.addEventListener('click', function () { setOpen(reveal.getAttribute('aria-expanded') !== 'true'); });
+    document.querySelectorAll('a[href="#hobbies"]').forEach(function (a) { a.addEventListener('click', function () { setOpen(true); }); });
+  }
 
-/* news */
-$('#news-list').innerHTML = NEWS.map(n => `<li><time>${n.d}</time><p><span class="tag ${n.tag.toLowerCase()}">${n.tag}</span>${n.t}</p></li>`).join('');
-
-/* publications */
-const STATUS_COL = {'Published':'#2D64AE','Accepted':'#3FA7C4','Under review':'#F2B705','In preparation':'#B9CBDD'};
-const auStr = a => a.length > 1 ? a.slice(0, -1).join(', ') + ', & ' + a[a.length - 1] : a[0];
-function cite(p) {
-  let s = `${auStr(p.au)} (${p.status === 'Published' ? p.y : p.status.toLowerCase()}). ${p.t}.`;
-  if (p.j) s += ` ${p.j}`;
-  if (p.v) s += `, ${p.v}${p.n ? '(' + p.n + ')' : ''}`;
-  if (p.p) s += `, ${p.p}`;
-  if (p.j) s += '.';
-  if (p.doi) s += ` https://doi.org/${p.doi}`;
-  return s;
-}
-function bib(p) {
-  const f = [`  author = {${p.au.join(' and ')}}`, `  title = {${p.t}}`];
-  if (p.conf) f.push(`  booktitle = {${p.j}}`); else f.push(`  journal = {${p.j}}`);
-  if (p.v) f.push(`  volume = {${p.v}}`);
-  if (p.n) f.push(`  number = {${p.n}}`);
-  if (p.p) f.push(`  pages = {${p.p}}`);
-  f.push(`  year = {${p.y}}`);
-  if (p.doi) f.push(`  doi = {${p.doi}}`);
-  return `@${p.conf ? 'inproceedings' : 'article'}{${p.key},\n${f.join(',\n')}\n}`;
-}
-const pubItem = (p, i) => {
-  const href = p.doi ? 'https://doi.org/' + p.doi : p.url;
-  const title = href ? `<a href="${href}" target="_blank" rel="noopener">${p.t}</a>` : p.t;
-  const au = auStr(p.au).replace(ME, `<b>${ME}</b>`);
-  const venue = p.j ? `<p class="ve">${p.j}${p.v ? ', ' + p.v + (p.n ? '(' + p.n + ')' : '') : ''}${p.p ? ', ' + p.p : ''}</p>` : '';
-  const acts = [`<span class="status"><i style="background:${STATUS_COL[p.status]}"></i>${p.status}</span>`];
-  if (p.doi) acts.push(`<a class="chip" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI</a>`);
-  if (p.url) acts.push(`<a class="chip" href="${p.url}" target="_blank" rel="noopener">${p.urlLabel || 'Link'}</a>`);
-  acts.push(`<button class="chip" type="button" data-cite="${i}">Copy citation</button>`);
-  if (p.key) acts.push(`<button class="chip" type="button" data-bib="${i}">Copy BibTeX</button>`);
-  return `<li data-kind="${p.kind}"><span class="yr">${p.y}</span><div><p class="t">${title}</p><p class="au">${au}</p>${venue}<div class="act">${acts.join('')}</div></div></li>`;
-};
-const GROUPS = [['journal','Journal articles'],['conference','Conference papers'],['progress','In progress']];
-$('#pubs').innerHTML = GROUPS.map(([k, l]) => `<li class="grp" data-kind="${k}">${l}</li>` + PUBS.map((p, i) => p.kind === k ? pubItem(p, i) : '').join('')).join('');
-const FILTERS = [['all','All'], ...GROUPS];
-$('#filters').innerHTML = FILTERS.map(([k, l]) => {
-  const c = k === 'all' ? PUBS.length : PUBS.filter(p => p.kind === k).length;
-  return `<button class="chip" type="button" data-f="${k}" aria-pressed="${k === 'all'}">${l} (${c})</button>`;
-}).join('');
-$('#filters').addEventListener('click', e => {
-  const b = e.target.closest('button'); if (!b) return;
-  const f = b.dataset.f;
-  for (const x of $('#filters').children) x.setAttribute('aria-pressed', x === b);
-  for (const li of $('#pubs').children) li.hidden = !(f === 'all' || li.dataset.kind === f);
-});
-
-/* talks */
-const linkHtml = ls => ls.length ? `<div class="lk">${ls.map(x => x.h ? `<a class="chip" href="${x.h}" target="_blank" rel="noopener">${x.l}</a>` : `<a class="chip todo" href="#" data-todo title="Link coming soon">${x.l}</a>`).join('')}</div>` : '';
-$('#talk-list').innerHTML = TALKS.map(t => `<li class="${t.award ? 'hot' : (t.k === 'Oral' ? 'ring' : '')}"><time>${t.d}</time><div><p class="k">${t.k}</p><p class="tt">${t.t}</p><p class="vv">${t.v}</p>${t.award ? `<span class="award">${t.award}</span>` : ''}${linkHtml(t.links)}</div></li>`).join('');
-$('#ws-list').innerHTML = WORKSHOPS.map(w => `<li><time>${w.d}</time><div><p class="tt">${w.t}</p><p class="vv">${w.v}</p></div></li>`).join('');
-
-/* clicks: copy buttons and placeholder links */
-document.addEventListener('click', e => {
-  const c = e.target.closest('[data-cite],[data-bib],[data-copy],[data-todo]');
-  if (!c) return;
-  if (c.hasAttribute('data-todo')) { e.preventDefault(); toast('This link is coming soon.'); return; }
-  if (c.dataset.copy) return copyText(c.dataset.copy, c.dataset.msg || 'Copied');
-  if (c.dataset.cite) return copyText(cite(PUBS[c.dataset.cite]), 'Citation copied');
-  if (c.dataset.bib) return copyText(bib(PUBS[c.dataset.bib]), 'BibTeX copied');
-});
-
-/* nav highlight */
-const navLinks = [...document.querySelectorAll('.links a')];
-const spy = new IntersectionObserver(es => {
-  for (const en of es) if (en.isIntersecting) navLinks.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id));
-}, {rootMargin: '-45% 0px -50% 0px'});
-navLinks.forEach(a => { const s = document.querySelector(a.getAttribute('href')); if (s) spy.observe(s); });
-
-/* ===== radar scope ===== */
-const NS = 'http://www.w3.org/2000/svg';
-const svg = $('#scope');
-const R = 240, KM = 50 / 60;
-const rand = (() => { let a = 20260611; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; })();
-const rad = d => d * Math.PI / 180;
-const pt = (r, a) => [r * Math.sin(rad(a)), -r * Math.cos(rad(a))];
-const f1 = n => n.toFixed(1);
-function sector(r0, r1, a0, a1) {
-  const [x0, y0] = pt(r0, a0), [x1, y1] = pt(r1, a0), [x2, y2] = pt(r1, a1), [x3, y3] = pt(r0, a1);
-  return `M${f1(x0)} ${f1(y0)}L${f1(x1)} ${f1(y1)}A${r1} ${r1} 0 0 1 ${f1(x2)} ${f1(y2)}L${f1(x3)} ${f1(y3)}A${r0} ${r0} 0 0 0 ${f1(x0)} ${f1(y0)}Z`;
-}
-let base = '';
-for (let r = 300; r <= 1500; r += 60) base += `<circle r="${r}" fill="none" stroke="#fff" stroke-opacity="${Math.max(.08, .7 - (r - 300) / 1500).toFixed(2)}" stroke-width="1.2"/>`;
-base += `<circle r="${R}" fill="#F4F9FE" stroke="#0F2540" stroke-width="2"/>`;
-for (let r = 60; r < R; r += 60) base += `<circle r="${r}" fill="none" stroke="#A9C7E4" stroke-width="1"/>`;
-for (let a = 0; a < 360; a += 10) {
-  const [x0, y0] = pt(R - (a % 30 ? 6 : 12), a), [x1, y1] = pt(R, a);
-  base += `<line x1="${f1(x0)}" y1="${f1(y0)}" x2="${f1(x1)}" y2="${f1(y1)}" stroke="#0F2540" stroke-width="${a % 30 ? 1 : 1.6}"/>`;
-}
-for (const a of [0, 90, 180, 270]) { const [x0, y0] = pt(18, a), [x1, y1] = pt(R, a); base += `<line x1="${f1(x0)}" y1="${f1(y0)}" x2="${f1(x1)}" y2="${f1(y1)}" stroke="#D6E5F4" stroke-width="1"/>`; }
-[['N', 0], ['E', 90], ['S', 180], ['W', 270]].forEach(([l, a]) => { const [x, y] = pt(R + 14, a); base += `<text class="tk" x="${f1(x)}" y="${f1(y)}" text-anchor="middle" dominant-baseline="central" font-size="14" fill="#0F2540">${l}</text>`; });
-for (let r = 60; r < R; r += 60) { const [x, y] = pt(r, 152); base += `<text class="rk" x="${f1(x + 5)}" y="${f1(y + 4)}" font-size="11.5" fill="#3B5470" stroke="#F4F9FE" stroke-width="3" paint-order="stroke">${Math.round(r * KM)} km</text>`; }
-
-const CLUSTERS = [
-  {id:'swarm', name:'Locust swarm', az:58, r:132, blobs:[{dx:0,dy:0,sx:30,sy:9,rot:35,amp:26},{dx:22,dy:-10,sx:16,sy:7,rot:35,amp:22},{dx:-24,dy:12,sx:14,sy:6,rot:40,amp:20}], min:6, label:[40, -36]},
-  {id:'swarm', name:'Locust swarm', az:104, r:78, blobs:[{dx:0,dy:0,sx:13,sy:6,rot:20,amp:21}], min:7},
-  {id:'rain', name:'Rain cell', az:300, r:150, blobs:[{dx:0,dy:0,sx:26,sy:20,rot:-20,amp:50},{dx:-20,dy:16,sx:22,sy:14,rot:10,amp:34},{dx:24,dy:-8,sx:16,sy:22,rot:0,amp:30}], min:8, label:[-6, -62]},
-  {id:'dust', name:'Dust', az:208, r:176, blobs:[{dx:0,dy:0,sx:46,sy:20,rot:70,amp:18},{dx:18,dy:-26,sx:26,sy:14,rot:60,amp:15}], min:5, label:[-62, 30]}
-];
-const ZC = [[5,'#BFE6F2'],[12,'#86CDE2'],[18,'#46A9C6'],[25,'#4FAE7F'],[32,'#2F8A55'],[40,'#E9C84A'],[46,'#E58A3C']];
-const zColour = z => { let c = ZC[0][1]; for (const [t, col] of ZC) if (z >= t) c = col; return c; };
-const CLS = {swarm:'#F2B705', rain:'#2D64AE', dust:'#B39469'};
-
-const DAZ = 2.5, DR = 6;
-const cols = new Map();
-const bins = [];
-for (const c of CLUSTERS) {
-  const [cx, cy] = pt(c.r, c.az);
-  c.cx = cx; c.cy = cy; c.peak = 0;
-  for (let r = Math.max(DR, c.r - 80); r < Math.min(R - 2, c.r + 80); r += DR) {
-    for (let a = c.az - 40; a < c.az + 40; a += DAZ) {
-      const ac = a + DAZ / 2, [x, y] = pt(r + DR / 2, ac);
-      let z = 0;
-      for (const b of c.blobs) {
-        const dx = x - (cx + b.dx), dy = y - (cy + b.dy), th = rad(b.rot);
-        const u = dx * Math.cos(th) + dy * Math.sin(th), v = -dx * Math.sin(th) + dy * Math.cos(th);
-        z = Math.max(z, b.amp * Math.exp(-((u / b.sx) ** 2 + (v / b.sy) ** 2) / 2));
+  // DELVE card: background of map pixels graded from healthy (green) to severe damage (dark red)
+  document.querySelectorAll('.dmg-bg').forEach(function (card) {
+    var cv = document.createElement('canvas');
+    cv.className = 'dmg-pixels'; cv.setAttribute('aria-hidden', 'true');
+    card.prepend(cv);
+    var COLS = ['#4E7A3A', '#E8C66B', '#E09A4E', '#C4562A', '#8B1A10'];   // healthy, mild stress, moderate, significant, severe
+    var CELL = 14;
+    function noise(i, j) { var h = Math.imul(i * 374761393 + j * 668265263, 1274126177); h ^= h >>> 15; h = Math.imul(h, 2246822519); h ^= h >>> 13; return (h >>> 0) / 4294967296; }
+    function draw() {
+      var w = card.clientWidth, h = card.clientHeight, dpr = Math.min(2, window.devicePixelRatio || 1);
+      cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+      var g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var nx = Math.ceil(w / CELL), ny = Math.ceil(h / CELL);
+      for (var j = 0; j < ny; j++) for (var i = 0; i < nx; i++) {
+        var dx = (i / nx - .74) / .34, dy = (j / ny - .82) / .3;   // damage patch, lower right
+        var v = 4.6 * Math.exp(-(dx * dx + dy * dy)) + 1.5 * (noise(i, j) - .5) - .15;
+        g.fillStyle = COLS[Math.max(0, Math.min(4, Math.round(v)))];
+        g.fillRect(i * CELL, j * CELL, CELL + .5, CELL + .5);   // touching pixels, no gaps
       }
-      z *= .8 + .4 * rand();
-      if (z < c.min) continue;
-      c.peak = Math.max(c.peak, z);
-      const key = Math.round((((a % 360) + 360) % 360) / DAZ);
-      bins.push({d: sector(r, r + DR, a, a + DAZ), z, cls: c.id, key});
     }
-  }
-}
-let echoes = '';
-const byKey = {};
-for (const b of bins) (byKey[b.key] = byKey[b.key] || []).push(b);
-for (const k in byKey) echoes += `<g data-k="${k}">${byKey[k].map(b => `<path d="${b.d}" data-z="${b.z.toFixed(1)}" data-c="${b.cls}"/>`).join('')}</g>`;
-
-let labels = '';
-for (const c of CLUSTERS) if (c.label) {
-  const lx = c.cx + c.label[0], ly = c.cy + c.label[1];
-  labels += `<g class="lbl"><line x1="${f1(c.cx)}" y1="${f1(c.cy)}" x2="${f1(lx)}" y2="${f1(ly)}" stroke="#0F2540" stroke-width="1"/><circle cx="${f1(c.cx)}" cy="${f1(c.cy)}" r="2.5" fill="#0F2540"/><text x="${f1(lx)}" y="${f1(ly - 6)}" text-anchor="middle" font-size="15" fill="#0F2540" stroke="#F4F9FE" stroke-width="4" paint-order="stroke">${c.name}</text></g>`;
-}
-let wedge = '';
-for (let i = 0; i < 20; i++) wedge += `<path d="${sector(0.1, R, -2 * (i + 1), -2 * i)}" fill="#2D64AE" fill-opacity="${(.2 * (1 - i / 20)).toFixed(3)}"/>`;
-svg.innerHTML = `<defs><clipPath id="clip"><circle r="${R - 1}"/></clipPath></defs>${base}<g clip-path="url(#clip)"><g id="echoes">${echoes}</g><g id="sweep">${wedge}<line x1="0" y1="0" x2="0" y2="${-R}" stroke="#1E5799" stroke-width="2"/></g></g><g id="labels">${labels}</g><circle r="6" fill="#0F2540"/><circle r="2.5" fill="#F2B705"/>`;
-
-const colEls = [...svg.querySelectorAll('#echoes g')].map(g => ({g, az: +g.dataset.k * DAZ}));
-const paths = [...svg.querySelectorAll('#echoes path')];
-const sweep = $('#sweep', svg), labelsG = $('#labels', svg);
-const legend = $('#legend'), cap = $('#cap'), roAz = $('#ro-az'), roHit = $('#ro-hit');
-let mode = 'class';
-function paint() {
-  for (const p of paths) p.setAttribute('fill', mode === 'z' ? zColour(+p.dataset.z) : CLS[p.dataset.c]);
-  labelsG.style.display = mode === 'z' ? 'none' : '';
-  legend.innerHTML = mode === 'z'
-    ? `<span class="bar">${ZC.map(([, c]) => `<i style="background:${c}"></i>`).join('')}</span><span>5 to 46+ dBZ</span>`
-    : `<span><i style="background:${CLS.swarm}"></i>Locust swarm</span><span><i style="background:${CLS.rain}"></i>Rain</span><span><i style="background:${CLS.dust}"></i>Dust</span>`;
-  cap.textContent = mode === 'z'
-    ? 'Reflectivity shows how strongly targets return the beam. On this alone, a swarm can pass for the edge of a rain cell.'
-    : 'Dual-polarisation adds the shape and uniformity of targets, so swarms, rain and dust separate. This is the basis of my detection work.';
-}
-document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => {
-  mode = b.dataset.mode;
-  document.querySelectorAll('.seg button').forEach(x => x.setAttribute('aria-pressed', x === b));
-  paint();
-}));
-paint();
-
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const PERIOD = 7000;
-let ang = 40, last = 0, visible = true, lastHit = '';
-function frame(t) {
-  if (!visible) { last = 0; return; }
-  if (last) ang = (ang + (t - last) * 360 / PERIOD) % 360;
-  last = t;
-  sweep.setAttribute('transform', `rotate(${ang.toFixed(2)})`);
-  for (const c of colEls) {
-    const d = (ang - c.az + 360) % 360;
-    c.g.setAttribute('opacity', (.42 + .58 * Math.exp(-d / 80)).toFixed(2));
-  }
-  roAz.textContent = 'Beam ' + String(Math.round(ang)).padStart(3, '0') + '°';
-  for (const c of CLUSTERS) {
-    const d = (ang - c.az + 360) % 360;
-    if (d < 3 && lastHit !== c.name + c.az) {
-      lastHit = c.name + c.az;
-      roHit.textContent = (mode === 'z' ? `Echo, peak ${Math.round(c.peak)} dBZ` : c.name) + `, ${Math.round(c.r * KM)} km at ${String(c.az).padStart(3, '0')}°`;
-    }
-  }
-  requestAnimationFrame(frame);
-}
-if (reduce) {
-  sweep.setAttribute('transform', 'rotate(40)');
-  roAz.textContent = 'Beam 040°';
-  roHit.textContent = 'Animation paused';
-} else {
-  new IntersectionObserver(es => { const v = es[0].isIntersecting; if (v && !visible) { visible = true; requestAnimationFrame(frame); } else visible = v; }).observe(svg);
-  requestAnimationFrame(frame);
-}
-
-/* ===== NDVI anomaly illustration ===== */
-const nd = $('#ndvi');
-const NC = ['#8E4F24','#B9773F','#DDB27A','#EFE3C8','#E8EFE0','#BBDDA4','#7DC17F','#3E9A5E'];
-const GW = 28, GH = 14, cw = 560 / GW, chh = 280 / GH;
-let cells = '';
-for (let j = 0; j < GH; j++) for (let i = 0; i < GW; i++) {
-  const dx = (i - 17) / 6.5, dy = (j - 7) / 3.8, dx2 = (i - 9) / 3, dy2 = (j - 9) / 2;
-  let v = .25 * Math.sin(i * .7) + .2 * Math.cos(j * .9 + i * .3) + (rand() - .5) * .5 + .35;
-  v -= 1.9 * Math.exp(-(dx * dx + dy * dy)) + .9 * Math.exp(-(dx2 * dx2 + dy2 * dy2));
-  const idx = Math.max(0, Math.min(NC.length - 1, Math.round((v + 1.4) / 2.2 * (NC.length - 1))));
-  cells += `<rect x="${f1(i * cw)}" y="${f1(j * chh)}" width="${f1(cw - 1)}" height="${f1(chh - 1)}" fill="${NC[idx]}"/>`;
-}
-nd.innerHTML = `<rect width="560" height="280" fill="#fff"/>${cells}<ellipse cx="${17 * cw + cw / 2}" cy="${7 * chh + chh / 2}" rx="${6.5 * cw * 1.25}" ry="${3.8 * chh * 1.25}" fill="none" stroke="#0F2540" stroke-width="2" stroke-dasharray="6 5"/><text x="${17 * cw}" y="${7 * chh - 3.8 * chh * 1.25 - 8}" text-anchor="middle" font-family="Archivo, sans-serif" font-size="15" font-weight="600" fill="#0F2540" stroke="#fff" stroke-width="4" paint-order="stroke">Swarm damage</text>`;
-document.querySelector('.ndvi-key').style.background = 'none';
-const key = document.querySelector('.ndvi-key');
-key.insertAdjacentHTML('beforebegin', `<div style="display:flex;height:10px;margin-top:10px;border-radius:5px;overflow:hidden">${NC.map(c => `<i style="flex:1;background:${c}"></i>`).join('')}</div>`);
-}
+    if ('ResizeObserver' in window) new ResizeObserver(draw).observe(card); else draw();
+  });
 </script>
 </body>
 </html>
