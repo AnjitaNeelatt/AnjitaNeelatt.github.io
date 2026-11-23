@@ -357,6 +357,13 @@
     p a, h3 a { text-decoration-line: none; }
     p a:hover, h3 a:hover, p a:focus-visible, h3 a:focus-visible { text-decoration-line: underline; text-decoration-color: var(--underline); }
   }
+  /* Link colour: change --link to recolour every link in the text (buttons and pills keep their own colours) */
+  :root { --link: #A9D0EA; }
+  p a, h3 a { color: var(--link); }
+  /* Two or more website pills side by side */
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .pills .pill { margin-top: 0; }
+  .hero-text .more a { color: #a13e01; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -385,7 +392,7 @@
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <p>My work</p>
-      <a href="#talks">Conferences & Workshops</a>
+      <a href="#talks">Conferences & workshops</a>
       <a href="#teaching">Teaching experience</a>
       <a href="#background">Education and skills</a>
       <p>Connect</p>
@@ -629,6 +636,17 @@
           </div>
         </li>
         <li>
+          <span class="yr">2025 to 2026</span>
+          <div>
+            <h3>Teaching assistant, Centre for Engineering Education Excellence (CEEE) Program of INAE and AICTE, IIT Bombay</h3>
+            <p>Beginner-level, hands-on workshops at the Department of Civil Engineering: Hands-on in Remote Sensing (July 2025) and Hands-on in Digital Image Processing (July 2026).</p>
+            <div class="pills">
+              <a class="pill" href="https://sites.google.com/view/hmers-iitb/">https://sites.google.com/view/hmers-iitb/</a>
+              <a class="pill" href="https://sites.google.com/view/handson2026/">https://sites.google.com/view/handson2026/</a>
+            </div>
+          </div>
+        </li>
+        <li>
           <span class="yr">2021 to 2026</span>
           <div>
             <h3>Teaching assistant, IIT Bombay</h3>
@@ -685,8 +703,8 @@
       <h2><button class="reveal" type="button" aria-expanded="false" aria-controls="hob-pics">Off the radar <i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></i></button></h2>
       <div class="pics hob-pics" id="hob-pics" hidden>
         <div class="ph" data-img="images/violin.png" data-alt="Violin"><span><b>Picture</b>images/violin.png</span></div>
-        <!--<div class="ph" data-img="images/crochet.jpeg" data-alt="Crochet"><span><b>Picture</b>images/crochet.jpeg</span></div>
-        <div class="ph" data-img="images/beaded-flowers.jpeg" data-alt="Beaded flowers"><span><b>Picture</b>images/beaded-flowers.jpeg</span></div>-->
+        <!--<div class="ph" data-img="images/crochet.jpg" data-alt="Crochet"><span><b>Picture</b>images/crochet.jpg</span></div> -->
+        <div class="ph" data-img="images/beaded-flowers.jpg" data-alt="Beaded flowers"><span><b>Picture</b>images/beaded-flowers.jpg</span></div>
         
       </div>
     </section>
